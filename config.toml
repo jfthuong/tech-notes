@@ -1,6 +1,6 @@
-baseurl = "https://jfthuong.github.io/tech-notes/"
+baseurl = "https://example.org/"
 languageCode = "en-us"
-title = "Icarus"
+title = "Training Materials"
 # Enable comments by entering your Disqus shortname
 disqusShortname = "jeffthuong"
 # Enable Google Analytics by entering your tracking code
@@ -10,7 +10,7 @@ paginate = 10
 # footnotereturnlinkcontents = "↩"
 theme = "icarus"
 # Comment the themesDir option if you use this theme in production
-#themesDir = "../.."
+# themesDir = "../.."
 
 # For publishing in GitHub
 publishDir = "docs"
@@ -53,6 +53,11 @@ publishDir = "docs"
     before = true
     label  = "Home"
     link   = "/"
+	
+[[params.menu]]
+    before = false
+    label  = "Python"
+    link   = "tags/python/"
 
 [[params.menu]]
     before = false

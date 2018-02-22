@@ -2,11 +2,11 @@
 title: "Introduction to ArgParse"
 date: 2018-02-21T22:14:48+08:00
 draft: false
-menu: main
 tags: ["Python"]
 categories: ["Training"]
 toc: true
 description: "Test"
+banner: "img/banners/eye.jpg"
 ---
 
 = Intro
