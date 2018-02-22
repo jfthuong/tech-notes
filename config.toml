@@ -1,4 +1,4 @@
-baseurl = "https://example.org/"
+baseurl = "https://jfthuong.github.io/tech-notes/"
 languageCode = "en-us"
 title = "Icarus"
 # Enable comments by entering your Disqus shortname
@@ -10,7 +10,7 @@ paginate = 10
 # footnotereturnlinkcontents = "↩"
 theme = "icarus"
 # Comment the themesDir option if you use this theme in production
-# themesDir = "../.."
+#themesDir = "../.."
 
 # For publishing in GitHub
 publishDir = "docs"

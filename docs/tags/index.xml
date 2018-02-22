@@ -2,14 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Icarus</title>
-    <link>https://example.org/tags/</link>
+    <link>https://jfthuong.github.io/tech-notes/tags/</link>
     <description>Recent content in Tags on Icarus</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Hugo](//gohugo.io).</copyright>
+    <lastBuildDate>Wed, 21 Feb 2018 22:14:48 +0800</lastBuildDate>
     
-	<atom:link href="https://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jfthuong.github.io/tech-notes/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Python</title>
+      <link>https://jfthuong.github.io/tech-notes/tags/python/</link>
+      <pubDate>Wed, 21 Feb 2018 22:14:48 +0800</pubDate>
+      
+      <guid>https://jfthuong.github.io/tech-notes/tags/python/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
