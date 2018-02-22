@@ -1,0 +1,70 @@
+---
+title: "Introduction to ArgParse"
+date: 2018-02-21T22:14:48+08:00
+draft: true
+menu: main
+tags: ["Python"]
+categories: ["Training"]
+toc: true
+description: "Test"
+---
+
+= Intro
+A test
+:description: Test of page
+:source-highlighter: prettify
+:icons: font
+
+This is an example of AsciiDoc File.
+
+
+== Toto
+== Tito
+
+[NOTE]
+====
+Line numbers is (so far) only supported by `asciidoc-pdf` when using `rouge`.
+See Issue https://github.com/asciidoctor/asciidoctor-pdf/issues/224[#224] for details.
+
+You can force the usage of `rouge` with following option in command line: +
+`-a source-highlighter=rouge`
+====
+
+
+.test.py
+{{< highlight python "linenos=inline,hl_lines=1 3-5,linenostart=10" >}}
+class ExprParser():
+    """To parse expressions"""
+    def __init__(self, obj, parse_children=False):
+        self.expressions = self.parse(obj, parse_children)
+
+    def parse(self, obj, parse_children=False):
+        """Extract all expressions from a given object"""
+        # Retrieve expressions of children, if needed
+        if parse_children and hasattr(obj, 'children'):
+            list_expr = []
+            for c in obj.children:
+                list_expr += self.parse(c, parse_children)
+            return list_expr
+{{< /highlight >}}
+
+=== Using Pandas :panda_face:
+
+
+.Hello.py
+[source, python, linenums]
+----
+include::../../static/test.py[]
+----
+
+```python
+class Toto(object):
+    def __init__(self):
+        pass
+```
+
+[quote, Me at 3am on very little sleep and too much coffee']
+____
+My blog post is done! and now to send my masterpiece to the world! ....
+wait a minute, why is all my text a H1...... I hate myself.
+____
