@@ -2,7 +2,7 @@ baseurl = "https://example.org/"
 languageCode = "en-us"
 title = "Training Materials"
 # Enable comments by entering your Disqus shortname
-disqusShortname = "jeffthuong"
+disqusShortname = "https-jfthuong-github-io"
 # Enable Google Analytics by entering your tracking code
 googleAnalytics = ""
 # Define the number of posts per page
