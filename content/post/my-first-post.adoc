@@ -1,22 +1,24 @@
 ---
 title: "Introduction to ArgParse"
-date: 2018-02-21T22:14:48+08:00
+date: 2018-02-23T22:14:48+08:00
 draft: false
-tags: ["Python"]
-categories: ["Training"]
+tags: ["ArgParse", "Intro"]
+categories: ["Python"]
 toc: true
-description: "Test"
+description: ""
 banner: "img/banners/eye.jpg"
+images: []
 ---
 
 = Intro
-A test
+Jean-Francois Thuong
 :description: Test of page
 :source-highlighter: prettify
 :icons: font
 
 This is an example of AsciiDoc File.
 
+<!--more-->
 
 == Toto
 == Tito
@@ -54,7 +56,7 @@ class ExprParser():
 .Hello.py
 [source, python, linenums]
 ----
-include::../../static/test.py[]
+include::/static/include/test.py[]
 ----
 
 ```python

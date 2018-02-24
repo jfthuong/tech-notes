@@ -22,7 +22,7 @@ publishDir = "docs"
 [params]
     # Tell me who you are
     author = "Jean-Francois Thuong"
-    bio = "Blogger - Programmer - Trainer"
+    bio = "Learner - Programmer - Trainer"
     location = "Shanghai, China"
     site_description = ""
     copyright  = "Powered by [Hugo](//gohugo.io)."
@@ -57,7 +57,7 @@ publishDir = "docs"
 [[params.menu]]
     before = false
     label  = "Python"
-    link   = "tags/python/"
+    link   = "categories/python/"
 
 [[params.menu]]
     before = false

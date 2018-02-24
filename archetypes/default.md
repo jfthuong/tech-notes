@@ -6,9 +6,9 @@ tags: ["Python"]
 categories: ["Training"]
 toc: true
 description: ""
-menu = ""
-banner = ""
-images = []
+menu: ""
+banner: ""
+images: []
 ---
 
 <!--more-->
