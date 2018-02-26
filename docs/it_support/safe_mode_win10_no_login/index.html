@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title>Booting in SafeMode with Win10 without login &middot; Training Materials</title>
+    <meta name="generator" content="Hugo 0.34" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Jean-Francois Thuong">
+    
+      <meta name="description" content="">
+    
+    
+    <link rel="canonical" href="/it_support/safe_mode_win10_no_login/"/>
+    <link rel="icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/monokai.css">
+    <link rel="stylesheet" href="fancybox/jquery.fancybox.css">
+    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <meta property="og:title" content="Booting in SafeMode with Win10 without login" />
+<meta property="og:description" content="
+
+
+This page is describing how to boot in Safe Mode when Windows 10 is installed on the machine
+and the user cannot access the login screen.
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/it_support/safe_mode_win10_no_login/" />
+
+
+
+<meta property="article:published_time" content="2018-02-26T09:14:48&#43;08:00"/>
+
+<meta property="article:modified_time" content="2018-02-26T09:14:48&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+<meta itemprop="name" content="Booting in SafeMode with Win10 without login">
+<meta itemprop="description" content="
+
+
+This page is describing how to boot in Safe Mode when Windows 10 is installed on the machine
+and the user cannot access the login screen.
+">
+
+
+<meta itemprop="datePublished" content="2018-02-26T09:14:48&#43;08:00" />
+<meta itemprop="dateModified" content="2018-02-26T09:14:48&#43;08:00" />
+<meta itemprop="wordCount" content="392">
+
+
+
+<meta itemprop="keywords" content="Win10,Boot," />
+
+    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Booting in SafeMode with Win10 without login"/>
+<meta name="twitter:description" content="
+
+
+This page is describing how to boot in Safe Mode when Windows 10 is installed on the machine
+and the user cannot access the login screen.
+"/>
+
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<div class="container">
+
+
+<div id="container">
+	<header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="" id="logo">
+          
+          <i class="logo" style="background-image: url('css/images/logo.png')"></i>
+          
+          <span class="site-title">Training Materials</span>
+      </a>
+      <nav id="main-nav">
+          
+          
+          <a class="main-nav-link" href="/">Home</a>
+          
+          
+          
+          
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <a class="main-nav-link" href="categories/python/">Python</a>
+          
+          
+          
+          <a class="main-nav-link" href="tags/">Tags</a>
+          
+          
+          
+          <a class="main-nav-link" href="categories/">Categories</a>
+          
+          
+      </nav>
+        <nav id="sub-nav">
+          <div class="profile" id="profile-nav">
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="css/images/avatar.png"><i class="fa fa-caret-down"></i></a>
+          </div>
+        </nav>
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+              <input type="search" name="q" class="search-form-input" placeholder="Search">
+              <button type="submit" class="search-form-submit">
+              </button>
+              <input type="hidden" name="sitesearch" value="" />
+         </form>
+        </div>
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tbody>
+          <tr>
+          
+          
+          <td><a class="main-nav-link" href="/">Home</a></td>
+          
+          
+          
+          
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <td><a class="main-nav-link" href="categories/python/">Python</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="tags/">Tags</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="categories/">Categories</a></td>
+          
+          
+          <td>
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+          <input type="search" name="q" class="search-form-input" placeholder="Search">
+          <input type="hidden" name="sitesearch" value="" />
+          </form>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</header>
+
+   	
+   	<div class="outer">
+   	
+    	<aside id="profile">
+  <div class="inner profile-inner">
+    <div class="base-info profile-block">
+      
+      <img id="avatar" src="https://www.gravatar.com/avatar/8063844ba80a593f6cf123309ce15c34?s=100&d=identicon"/>
+      
+      <h2 id="name">Jean-Francois Thuong</h2>
+      <h3 id="title">Learner - Programmer - Trainer</h3>
+      <span id="location"><i class="fa fa-map-marker"></i>Shanghai, China</span>
+      
+          <a id="follow" href="https://github.com/jfthuong">
+              Follow
+          </a>
+      
+    </div>
+    <div class="article-info profile-block">
+      <div class="article-info-block">
+        7
+        <span>Posts</span>
+      </div>
+      <div class="article-info-block">
+        
+          9
+        
+        <span>
+            Tags
+        </span>
+      </div>
+    </div>
+    <div class="profile-block social-links">
+      <table>
+        <tr>
+          
+<td><a href="//github.com/jfthuong" target="_blank" title="GitHub"><i class="fa fa-github"></i></a></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<td><a href="//linkedin.com/in/jfthuong" target="_blank" title="LinkedIn"><i class="fa fa-linkedin"></i></a></td>
+
+
+
+
+
+<td><a href="//stackoverflow.com/users/1603480" target="_blank" title="Stack Overflow"><i class="fa fa-stack-overflow"></i></a></td>
+
+
+
+
+
+
+
+
+
+
+
+
+          <td><a href="/index.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</aside>
+
+    
+
+    <section id="main">
+    
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+
+        <header class="article-header">
+    <a href="/it_support/safe_mode_win10_no_login/">
+    <h1 class="article-title" itemprop="name">
+        Booting in SafeMode with Win10 without login
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2018-02-26 09:14:48 &#43;0800 CST" itemprop="datePublished">2018-02-26</time>
+            &middot;
+            392
+            words
+            &middot;
+            2
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="categories/it">IT</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="tags/win10">Win10</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="tags/boot">Boot</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This page is describing how to boot in Safe Mode when Windows 10 is installed on the machine
+and the user cannot access the login screen.</p>
+</div>
+<div class="paragraph">
+<p></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_open_command_prompt">Open Command Prompt</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Boot from Windows 10 installation disk (or repair disk)</p>
+</li>
+<li>
+<p>Select your language and keyboard (or just click on <strong>Next</strong>)</p>
+</li>
+<li>
+<p>Sele ct <strong>Repair your computer</strong></p>
+</li>
+<li>
+<p>Select <strong>Troubleshoot</strong></p>
+</li>
+<li>
+<p>Select <strong>Advanced options</strong></p>
+</li>
+<li>
+<p>And finally <strong>Command Prompt</strong></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_set_safemode">Set Safemode</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>With Command Prompt open, execute the correct <code>bcdedit</code> command as shown below based
+on which Safe Mode option you&#8217;d like to start:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Safe Mode</strong>:</p>
+<div class="literalblock">
+<div class="content">
+<pre>bcdedit /set {default} safeboot minimal</pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Safe Mode with Networking</strong>:</p>
+<div class="literalblock">
+<div class="content">
+<pre>bcdedit /set {default} safeboot network</pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Safe Mode with Command Prompt</strong>:</p>
+<div class="literalblock">
+<div class="content">
+<pre>bcdedit /set {default} safeboot minimal
+bcdedit /set {default} safebootalternateshell yes</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+Be sure to type whatever command you choose exactly as shown and then execute it using the Enter key.
+Spaces are very important!
+Two separate commands are required to start Safe Mode with Command Prompt, so be sure to execute them both.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>A properly executed <code>bcdedit</code> command should return the following message:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>The operation completed successfully</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you see any of the following messages, be sure tha you have typed the commands properly</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>The parameter is incorrect
+The set command specified is not valid
+... is not recognized as an internal or external command...</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_reboot">Reboot</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Close the Command Prompt window.</p>
+</li>
+<li>
+<p>Tap or click on Continue.</p>
+</li>
+<li>
+<p>Once Windows starts, log in as you normally do and use Safe Mode however you were planning.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">
+Windows will continue to start in Safe Mode every time you reboot unless you undo safe mode.
+See next section for more details.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_stopping_safe_mode_at_next_restart">Stopping Safe Mode at next restart</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The easiest way to do that is not by executing more commands,
+but via System Configuration. See How to Start Windows in Safe Mode Using System Configuration and follow steps 8 through 11 in that tutorial.</p>
+</div>
+<div class="paragraph">
+<p>If Windows is stuck in a sort of "Safe Mode Loop," preventing you from starting in normal mode again, and you&#8217;ve tried the instructions I gave in the Important call-out from Step 8 above but haven&#8217;t been successful, try this:</p>
+</div>
+<div class="paragraph">
+<p>Start Command Prompt from outside of Windows, the process outlined in Steps 1 and 2 above.
+Once Command Prompt is open, execute this command:
+bcdedit /deletevalue {default} safeboot
+Assuming it was successfully executed (see Step 4 above), restart your computer and Windows should then start normally.</p>
+</div>
+</div>
+</div>
+        </div>
+        <footer class="article-footer">
+    <a data-url="/it_support/safe_mode_win10_no_login/" data-id="851e5d48f373b4f175cd798c9aeec1d5" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <a href="/it_support/safe_mode_win10_no_login/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+
+    
+
+</article>
+
+
+<section id="comments">
+    <div id="disqus_thread">
+        <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "https-jfthuong-github-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+</section>
+
+
+    </section>
+
+   	
+    	<aside id="sidebar">
+    
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Recents
+    </h3>
+    <div class="widget">
+        <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="/2018/02/23/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="categories/tool">
+                        Tool
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="/2018/02/23/" class="title"></a></p>
+                    <p class="item-date">
+                        <time datetime="2018-02-23 22:14:48 &#43;0800 CST" itemprop="datePublished">2018-02-23</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="/2018/02/23/argparse---introduction/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="categories/python">
+                        Python
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="/2018/02/23/argparse---introduction/" class="title">ArgParse - Introduction</a></p>
+                    <p class="item-date">
+                        <time datetime="2018-02-23 22:14:48 &#43;0800 CST" itemprop="datePublished">2018-02-23</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="/2018/02/23/asciidoc---advanced-topics/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="categories/language">
+                        Language
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="/2018/02/23/asciidoc---advanced-topics/" class="title">AsciiDoc - Advanced topics</a></p>
+                    <p class="item-date">
+                        <time datetime="2018-02-23 22:14:48 &#43;0800 CST" itemprop="datePublished">2018-02-23</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="/2018/02/23/asciidoc---introduction/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="categories/language">
+                        Language
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="/2018/02/23/asciidoc---introduction/" class="title">AsciiDoc - Introduction</a></p>
+                    <p class="item-date">
+                        <time datetime="2018-02-23 22:14:48 &#43;0800 CST" itemprop="datePublished">2018-02-23</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="/2018/02/23/pytest---advanced/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="categories/python">
+                        Python
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="/2018/02/23/pytest---advanced/" class="title">Pytest - Advanced</a></p>
+                    <p class="item-date">
+                        <time datetime="2018-02-23 22:14:48 &#43;0800 CST" itemprop="datePublished">2018-02-23</time>
+                    </p>
+                </div>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="categories/it">
+                    it
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="categories/language">
+                    language
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="categories/python">
+                    python
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="categories/shell">
+                    shell
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="categories/tool">
+                    tool
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Tags
+    </h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="tags/advanced">
+                    advanced
+                </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="tags/argparse">
+                    argparse
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="tags/asciidoc">
+                    asciidoc
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="tags/boot">
+                    boot
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="tags/intro">
+                    intro
+                </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="tags/pytest">
+                    pytest
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="tags/scons">
+                    scons
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="tags/snippet">
+                    snippet
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="tags/win10">
+                    win10
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Tag cloud
+    </h3>
+    <div class="widget tagcloud">
+        
+        
+        <a href="tags/advanced" style="font-size: 12px;">advanced</a>
+        
+        
+        <a href="tags/argparse" style="font-size: 12px;">argparse</a>
+        
+        
+        <a href="tags/asciidoc" style="font-size: 12px;">asciidoc</a>
+        
+        
+        <a href="tags/boot" style="font-size: 12px;">boot</a>
+        
+        
+        <a href="tags/intro" style="font-size: 12px;">intro</a>
+        
+        
+        <a href="tags/pytest" style="font-size: 12px;">pytest</a>
+        
+        
+        <a href="tags/scons" style="font-size: 12px;">scons</a>
+        
+        
+        <a href="tags/snippet" style="font-size: 12px;">snippet</a>
+        
+        
+        <a href="tags/win10" style="font-size: 12px;">win10</a>
+        
+    </div>
+</div>
+
+
+
+
+
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+
+    
+	</div>
+</div>
+
+<footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018
+      Powered by <a href="//gohugo.io">Hugo</a>.
+    </div>
+  </div>
+</footer>
+
+
+<script src="fancybox/jquery.fancybox.pack.js"></script>
+<script src="js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+</body>
+</html>

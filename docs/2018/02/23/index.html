@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title> &middot; Training Materials</title>
+    <meta name="generator" content="Hugo 0.34" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Jean-Francois Thuong">
+    
+      <meta name="description" content="Introduction to SCons, a software construction tool to replace Makefile">
+    
+    
+    <link rel="canonical" href="/2018/02/23/"/>
+    <link rel="icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/monokai.css">
+    <link rel="stylesheet" href="fancybox/jquery.fancybox.css">
+    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <meta property="og:title" content="" />
+<meta property="og:description" content="Introduction to SCons, a software construction tool to replace Makefile" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/2018/02/23/" />
+
+
+
+<meta property="article:published_time" content="2018-02-23T22:14:48&#43;08:00"/>
+
+<meta property="article:modified_time" content="2018-02-23T22:14:48&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+<meta itemprop="name" content="">
+<meta itemprop="description" content="Introduction to SCons, a software construction tool to replace Makefile">
+
+
+<meta itemprop="datePublished" content="2018-02-23T22:14:48&#43;08:00" />
+<meta itemprop="dateModified" content="2018-02-23T22:14:48&#43;08:00" />
+<meta itemprop="wordCount" content="769">
+
+
+
+<meta itemprop="keywords" content="SCons,Intro," />
+
+    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="Introduction to SCons, a software construction tool to replace Makefile"/>
+
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<div class="container">
+
+
+<div id="container">
+	<header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="" id="logo">
+          
+          <i class="logo" style="background-image: url('css/images/logo.png')"></i>
+          
+          <span class="site-title">Training Materials</span>
+      </a>
+      <nav id="main-nav">
+          
+          
+          <a class="main-nav-link" href="/">Home</a>
+          
+          
+          
+          
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <a class="main-nav-link" href="categories/python/">Python</a>
+          
+          
+          
+          <a class="main-nav-link" href="tags/">Tags</a>
+          
+          
+          
+          <a class="main-nav-link" href="categories/">Categories</a>
+          
+          
+      </nav>
+        <nav id="sub-nav">
+          <div class="profile" id="profile-nav">
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="css/images/avatar.png"><i class="fa fa-caret-down"></i></a>
+          </div>
+        </nav>
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+              <input type="search" name="q" class="search-form-input" placeholder="Search">
+              <button type="submit" class="search-form-submit">
+              </button>
+              <input type="hidden" name="sitesearch" value="" />
+         </form>
+        </div>
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tbody>
+          <tr>
+          
+          
+          <td><a class="main-nav-link" href="/">Home</a></td>
+          
+          
+          
+          
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <td><a class="main-nav-link" href="categories/python/">Python</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="tags/">Tags</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="categories/">Categories</a></td>
+          
+          
+          <td>
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+          <input type="search" name="q" class="search-form-input" placeholder="Search">
+          <input type="hidden" name="sitesearch" value="" />
+          </form>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</header>
+
+   	
+   	<div class="outer">
+   	
+    	<aside id="profile">
+  <div class="inner profile-inner">
+    <div class="base-info profile-block">
+      
+      <img id="avatar" src="https://www.gravatar.com/avatar/8063844ba80a593f6cf123309ce15c34?s=100&d=identicon"/>
+      
+      <h2 id="name">Jean-Francois Thuong</h2>
+      <h3 id="title">Learner - Programmer - Trainer</h3>
+      <span id="location"><i class="fa fa-map-marker"></i>Shanghai, China</span>
+      
+          <a id="follow" href="https://github.com/jfthuong">
+              Follow
+          </a>
+      
+    </div>
+    <div class="article-info profile-block">
+      <div class="article-info-block">
+        7
+        <span>Posts</span>
+      </div>
+      <div class="article-info-block">
+        
+          9
+        
+        <span>
+            Tags
+        </span>
+      </div>
+    </div>
+    <div class="profile-block social-links">
+      <table>
+        <tr>
+          
+<td><a href="//github.com/jfthuong" target="_blank" title="GitHub"><i class="fa fa-github"></i></a></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<td><a href="//linkedin.com/in/jfthuong" target="_blank" title="LinkedIn"><i class="fa fa-linkedin"></i></a></td>
+
+
+
+
+
+<td><a href="//stackoverflow.com/users/1603480" target="_blank" title="Stack Overflow"><i class="fa fa-stack-overflow"></i></a></td>
+
+
+
+
+
+
+
+
+
+
+
+
+          <td><a href="/index.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</aside>
+
+    
+
+    <section id="main">
+    
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+
+        <header class="article-header">
+    <a href="/2018/02/23/">
+    <h1 class="article-title" itemprop="name">
+        
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2018-02-23 22:14:48 &#43;0800 CST" itemprop="datePublished">2018-02-23</time>
+            &middot;
+            769
+            words
+            &middot;
+            4
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="categories/tool">Tool</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="tags/scons">SCons</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="tags/intro">Intro</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <div class="sect1">
+<h2 id="_purpose">Purpose</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>SCons</strong> is a tool equivalent to Makefile (but better). It is configured by simple Python code.</p>
+</div>
+<div class="paragraph">
+<p>From the authors:</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>SCons is an Open Source software construction tool—that is, a next-generation build tool.
+Think of SCons as an improved, cross-platform substitute for the classic Make
+utility with integrated functionality similar to autoconf/automake
+nd compiler caches such as ccache. In short, SCons is an easier,
+more reliable and faster way to build software.</p>
+</div>
+</blockquote>
+<div class="attribution">
+&#8212; scons.org
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_features">Features</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>It is working best with <strong>C/C++</strong> language but can also works out of the box with:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Java</p>
+</li>
+<li>
+<p>Latex (to PDF)</p>
+</li>
+<li>
+<p>DocBook</p>
+</li>
+<li>
+<p>Archives (tar, zip)</p>
+</li>
+<li>
+<p>Text files</p>
+</li>
+<li>
+<p>etc.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The list of builders can be found <a href="http://scons.org/pages/download.html">here</a> and
+the list of tools it uses can be found <a href="http://scons.org/doc/HTML/scons-user.html#app-tools">here</a>.</p>
+</div>
+<div class="paragraph">
+<p>Additionally, any command can easily be added via the
+<a href="http://scons.org/doc/HTML/scons-user.html#chap-builders-commands">Command</a> Builder.</p>
+</div>
+<div class="paragraph">
+<p>Some of the highlights of this tool:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Configuration files are Python scripts&#8212;&#8203;use the power of a real programming language to solve build problems.</p>
+</li>
+<li>
+<p>Reliable, automatic dependency analysis built-in for C, C++ and Fortran</p>
+</li>
+<li>
+<p>Built-in support for C, C++, D, Java, Fortran, Yacc, Lex, Qt and SWIG, and building TeX and LaTeX documents.</p>
+</li>
+<li>
+<p>Easily extensible through user-defined Builders for other languages or file types.</p>
+</li>
+<li>
+<p>Reliable detection of build changes using MD5 signatures; optional, configurable support for traditional timestamps.</p>
+</li>
+<li>
+<p>Integrated Autoconf-like support for finding #include files, libraries, functions and typedefs.</p>
+</li>
+<li>
+<p>Global view of all dependencies</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_links">Links</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Official User Guide: <a href="http://scons.org/doc/HTML/scons-user.html" class="bare">http://scons.org/doc/HTML/scons-user.html</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_installation">Installation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>On Windows:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Install <strong>Python</strong></p>
+</li>
+<li>
+<p>Download Windows installer from: <a href="http://scons.org/pages/download.html" class="bare">http://scons.org/pages/download.html</a></p>
+</li>
+<li>
+<p>Run the installer</p>
+</li>
+<li>
+<p>Check SCons has been installed successfully: <code>scons --version</code></p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Although <code>pip</code> can find <code>scons</code>, it cannot install it. What a pity!
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+SCons is not (yet) compatible with Python 3.x
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Another way to install SCons is to build from the sources.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Download the sources (<strong>.zip</strong> or <strong>.tar.gz</strong>)</p>
+</li>
+<li>
+<p>Unzip somewhere and open a command line in that directory</p>
+</li>
+<li>
+<p>Install with Python: <code>python setup.py install</code></p>
+</li>
+<li>
+<p>Check the installation: <code>scons --version</code></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>If you have an issue with installation, please check FAQ.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_a_small_example">A small example</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The source file:</p>
+</div>
+<div class="listingblock">
+<div class="title">hello.c</div>
+<div class="content">
+<pre class="highlight"><code class="language-c" data-lang="c">int main()
+{
+    printf("Hello, world!\n");
+    return 0;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The building program (which is using Python syntax):</p>
+</div>
+<div class="listingblock">
+<div class="title">SConstruct</div>
+<div class="content">
+<pre class="highlight"><code class="language-python" data-lang="python">Program('hello.c')</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The command to run (without the prompt <code>$</code>):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ scons</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And that&#8217;s it: this will create the program built from <em>hello.c</em>.</p>
+</div>
+<div class="paragraph">
+<p>For information, it will display the following on the console:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>scons: Reading SConscript files ...
+scons: done reading SConscript files.
+scons: Building targets ...
+cc -o hello.o -c hello.c
+cc -o hello hello.o
+scons: done building targets.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And if you want to do a clean-up, <strong>SCons</strong> will automatically decide what needs to be done.
+You just need to call with <code>-c</code> option (or <code>--clean</code> if you prefer).</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ scons -c</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_faq">FAQ</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_command_not_found_when_running_code_scons_code">"Command not found" when running <code>scons</code></h3>
+<div class="paragraph">
+<p>First, install <strong>SCons</strong> with <code>python setup.py install</code> method.</p>
+</div>
+<div class="paragraph">
+<p>Then, go to your Python installation directory
+and put either of the following files in subfolder <strong>Scripts</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>scons.bat</code> if you run scons from <strong>cmd</strong></p>
+</li>
+<li>
+<p><code>scons</code> if you run scons from <strong>Msys</strong> or <strong>Cygwin</strong></p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">&lt;Python_dir&gt;/Scripts/scons.bat</div>
+<div class="content">
+<pre class="highlight"><code class="language-bat" data-lang="bat">@REM Copyright (c) 2001 - 2017 The SCons Foundation
+@REM src/script/scons.bat rel_3.0.0:4395:8972f6a2f699 2017/09/18 12:59:24 bdbaddog
+@echo off
+set SCONS_ERRORLEVEL=
+if "%OS%" == "Windows_NT" goto WinNT
+
+@REM for 9x/Me you better not have more than 9 args
+python -c "from os.path import join; import sys; sys.path = [ join(sys.prefix, 'Lib', 'site-packages', 'scons-3.0.0'), join(sys.prefix, 'Lib', 'site-packages', 'scons'), join(sys.prefix, 'scons-3.0.0'), join(sys.prefix, 'scons')] + sys.path; import SCons.Script; SCons.Script.main()" %1 %2 %3 %4 %5 %6 %7 %8 %9
+@REM no way to set exit status of this script for 9x/Me
+goto endscons
+
+@REM Credit where credit is due:  we return the exit code despite our
+@REM use of setlocal+endlocal using a technique from Bear's Journal:
+@REM http://code-bear.com/bearlog/2007/06/01/getting-the-exit-code-from-a-batch-file-that-is-run-from-a-python-program/
+
+:WinNT
+setlocal
+@REM ensure the script will be executed with the Python it was installed for
+set path=%~dp0;%~dp0..;%path%
+@REM try the script named as the .bat file in current dir, then in Scripts subdir
+set scriptname=%~dp0%~n0.py
+if not exist "%scriptname%" set scriptname=%~dp0Scripts\%~n0.py
+python "%scriptname%" %*
+endlocal &amp; set SCONS_ERRORLEVEL=%ERRORLEVEL%
+
+if NOT "%COMSPEC%" == "%SystemRoot%\system32\cmd.exe" goto returncode
+if errorlevel 9009 echo you do not have python in your PATH
+goto endscons
+
+:returncode
+exit /B %SCONS_ERRORLEVEL%
+
+:endscons
+call :returncode %SCONS_ERRORLEVEL%</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">&lt;Python_dir&gt;/Scripts/scons</div>
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">#!/bin/bash
+
+# Script to launch scons from MSys or Cygwin
+# Inspired by scons.bat delivered with SCons
+
+# Ensure the script will be executed with the Python it was installed for
+BASEDIR=$(dirname "$0")
+PATH="$BASEDIR:$BASEDIR/..:$PATH"
+
+# Try the script named as the .bat file in current dir, then in Scripts subdir
+BASENAME=$(basename "$0")
+SCRIPT=${BASENAME%.*}
+SCRIPTNAME="$BASEDIR/$SCRIPT.py"
+if ! [ -f "$SCRIPTNAME" ]; then
+	SCRIPTNAME="$BASEDIR/Scripts/$SCRIPT.py"
+fi
+
+# Run
+python "$SCRIPTNAME" $@
+SCONS_ERRORLEVEL=$?
+
+# Check error code
+if [ SCONS_ERRORLEVEL == 9009 ]; then
+	echo "You do not have python in your PATH"
+fi
+
+# End
+exit $SCONS_ERRORLEVEL</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+        </div>
+        <footer class="article-footer">
+    <a data-url="/2018/02/23/" data-id="c390779a136311b365c0907eab44f818" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <a href="/2018/02/23/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+
+    
+<nav id="article-nav">
+    
+    <a href="/2018/02/23/argparse---introduction/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Older
+      </strong>
+      <div class="article-nav-title">ArgParse - Introduction</div>
+    </a>
+    
+
+    
+</nav>
+
+
+</article>
+
+
+<section id="comments">
+    <div id="disqus_thread">
+        <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "https-jfthuong-github-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+</section>
+
+
+    </section>
+
+   	
+    	<aside id="sidebar">
+    
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Recents
+    </h3>
+    <div class="widget">
+        <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="/2018/02/23/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="categories/tool">
+                        Tool
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="/2018/02/23/" class="title"></a></p>
+                    <p class="item-date">
+                        <time datetime="2018-02-23 22:14:48 &#43;0800 CST" itemprop="datePublished">2018-02-23</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="/2018/02/23/argparse---introduction/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="categories/python">
+                        Python
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="/2018/02/23/argparse---introduction/" class="title">ArgParse - Introduction</a></p>
+                    <p class="item-date">
+                        <time datetime="2018-02-23 22:14:48 &#43;0800 CST" itemprop="datePublished">2018-02-23</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="/2018/02/23/asciidoc---advanced-topics/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="categories/language">
+                        Language
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="/2018/02/23/asciidoc---advanced-topics/" class="title">AsciiDoc - Advanced topics</a></p>
+                    <p class="item-date">
+                        <time datetime="2018-02-23 22:14:48 &#43;0800 CST" itemprop="datePublished">2018-02-23</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="/2018/02/23/asciidoc---introduction/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="categories/language">
+                        Language
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="/2018/02/23/asciidoc---introduction/" class="title">AsciiDoc - Introduction</a></p>
+                    <p class="item-date">
+                        <time datetime="2018-02-23 22:14:48 &#43;0800 CST" itemprop="datePublished">2018-02-23</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="/2018/02/23/pytest---advanced/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="categories/python">
+                        Python
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="/2018/02/23/pytest---advanced/" class="title">Pytest - Advanced</a></p>
+                    <p class="item-date">
+                        <time datetime="2018-02-23 22:14:48 &#43;0800 CST" itemprop="datePublished">2018-02-23</time>
+                    </p>
+                </div>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="categories/it">
+                    it
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="categories/language">
+                    language
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="categories/python">
+                    python
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="categories/shell">
+                    shell
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="categories/tool">
+                    tool
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Tags
+    </h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="tags/advanced">
+                    advanced
+                </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="tags/argparse">
+                    argparse
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="tags/asciidoc">
+                    asciidoc
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="tags/boot">
+                    boot
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="tags/intro">
+                    intro
+                </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="tags/pytest">
+                    pytest
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="tags/scons">
+                    scons
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="tags/snippet">
+                    snippet
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="tags/win10">
+                    win10
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Tag cloud
+    </h3>
+    <div class="widget tagcloud">
+        
+        
+        <a href="tags/advanced" style="font-size: 12px;">advanced</a>
+        
+        
+        <a href="tags/argparse" style="font-size: 12px;">argparse</a>
+        
+        
+        <a href="tags/asciidoc" style="font-size: 12px;">asciidoc</a>
+        
+        
+        <a href="tags/boot" style="font-size: 12px;">boot</a>
+        
+        
+        <a href="tags/intro" style="font-size: 12px;">intro</a>
+        
+        
+        <a href="tags/pytest" style="font-size: 12px;">pytest</a>
+        
+        
+        <a href="tags/scons" style="font-size: 12px;">scons</a>
+        
+        
+        <a href="tags/snippet" style="font-size: 12px;">snippet</a>
+        
+        
+        <a href="tags/win10" style="font-size: 12px;">win10</a>
+        
+    </div>
+</div>
+
+
+
+
+
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+
+    
+	</div>
+</div>
+
+<footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018
+      Powered by <a href="//gohugo.io">Hugo</a>.
+    </div>
+  </div>
+</footer>
+
+
+<script src="fancybox/jquery.fancybox.pack.js"></script>
+<script src="js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+</body>
+</html>

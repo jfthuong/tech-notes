@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IT_supports on Training Materials</title>
+    <link>/it_support/</link>
+    <description>Recent content in IT_supports on Training Materials</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Powered by [Hugo](//gohugo.io).</copyright>
+    <lastBuildDate>Mon, 26 Feb 2018 09:14:48 +0800</lastBuildDate>
+    
+	<atom:link href="/it_support/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Booting in SafeMode with Win10 without login</title>
+      <link>/it_support/safe_mode_win10_no_login/</link>
+      <pubDate>Mon, 26 Feb 2018 09:14:48 +0800</pubDate>
+      
+      <guid>/it_support/safe_mode_win10_no_login/</guid>
+      <description>&lt;div id=&#34;preamble&#34;&gt;
+&lt;div class=&#34;sectionbody&#34;&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;This page is describing how to boot in Safe Mode when Windows 10 is installed on the machine
+and the user cannot access the login screen.&lt;/p&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

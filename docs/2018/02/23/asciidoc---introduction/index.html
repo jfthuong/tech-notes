@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title>AsciiDoc - Introduction &middot; Training Materials</title>
+    <meta name="generator" content="Hugo 0.34" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Jean-Francois Thuong">
+    
+      <meta name="description" content="Introduction to AsciiDoc, an alternative to Markdown">
+    
+    
+    <link rel="canonical" href="/2018/02/23/asciidoc---introduction/"/>
+    <link rel="icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/monokai.css">
+    <link rel="stylesheet" href="fancybox/jquery.fancybox.css">
+    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <meta property="og:title" content="AsciiDoc - Introduction" />
+<meta property="og:description" content="Introduction to AsciiDoc, an alternative to Markdown" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/2018/02/23/asciidoc---introduction/" />
+
+
+
+<meta property="article:published_time" content="2018-02-23T22:14:48&#43;08:00"/>
+
+<meta property="article:modified_time" content="2018-02-23T22:14:48&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+<meta itemprop="name" content="AsciiDoc - Introduction">
+<meta itemprop="description" content="Introduction to AsciiDoc, an alternative to Markdown">
+
+
+<meta itemprop="datePublished" content="2018-02-23T22:14:48&#43;08:00" />
+<meta itemprop="dateModified" content="2018-02-23T22:14:48&#43;08:00" />
+<meta itemprop="wordCount" content="321">
+
+
+
+<meta itemprop="keywords" content="ArgParse,Intro," />
+
+    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="AsciiDoc - Introduction"/>
+<meta name="twitter:description" content="Introduction to AsciiDoc, an alternative to Markdown"/>
+
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<div class="container">
+
+
+<div id="container">
+	<header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="" id="logo">
+          
+          <i class="logo" style="background-image: url('css/images/logo.png')"></i>
+          
+          <span class="site-title">Training Materials</span>
+      </a>
+      <nav id="main-nav">
+          
+          
+          <a class="main-nav-link" href="/">Home</a>
+          
+          
+          
+          
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <a class="main-nav-link" href="categories/python/">Python</a>
+          
+          
+          
+          <a class="main-nav-link" href="tags/">Tags</a>
+          
+          
+          
+          <a class="main-nav-link" href="categories/">Categories</a>
+          
+          
+      </nav>
+        <nav id="sub-nav">
+          <div class="profile" id="profile-nav">
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="css/images/avatar.png"><i class="fa fa-caret-down"></i></a>
+          </div>
+        </nav>
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+              <input type="search" name="q" class="search-form-input" placeholder="Search">
+              <button type="submit" class="search-form-submit">
+              </button>
+              <input type="hidden" name="sitesearch" value="" />
+         </form>
+        </div>
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tbody>
+          <tr>
+          
+          
+          <td><a class="main-nav-link" href="/">Home</a></td>
+          
+          
+          
+          
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <td><a class="main-nav-link" href="categories/python/">Python</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="tags/">Tags</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="categories/">Categories</a></td>
+          
+          
+          <td>
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+          <input type="search" name="q" class="search-form-input" placeholder="Search">
+          <input type="hidden" name="sitesearch" value="" />
+          </form>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</header>
+
+   	
+   	<div class="outer">
+   	
+    	<aside id="profile">
+  <div class="inner profile-inner">
+    <div class="base-info profile-block">
+      
+      <img id="avatar" src="https://www.gravatar.com/avatar/8063844ba80a593f6cf123309ce15c34?s=100&d=identicon"/>
+      
+      <h2 id="name">Jean-Francois Thuong</h2>
+      <h3 id="title">Learner - Programmer - Trainer</h3>
+      <span id="location"><i class="fa fa-map-marker"></i>Shanghai, China</span>
+      
+          <a id="follow" href="https://github.com/jfthuong">
+              Follow
+          </a>
+      
+    </div>
+    <div class="article-info profile-block">
+      <div class="article-info-block">
+        7
+        <span>Posts</span>
+      </div>
+      <div class="article-info-block">
+        
+          9
+        
+        <span>
+            Tags
+        </span>
+      </div>
+    </div>
+    <div class="profile-block social-links">
+      <table>
+        <tr>
+          
+<td><a href="//github.com/jfthuong" target="_blank" title="GitHub"><i class="fa fa-github"></i></a></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<td><a href="//linkedin.com/in/jfthuong" target="_blank" title="LinkedIn"><i class="fa fa-linkedin"></i></a></td>
+
+
+
+
+
+<td><a href="//stackoverflow.com/users/1603480" target="_blank" title="Stack Overflow"><i class="fa fa-stack-overflow"></i></a></td>
+
+
+
+
+
+
+
+
+
+
+
+
+          <td><a href="/index.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</aside>
+
+    
+
+    <section id="main">
+    
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+
+        <header class="article-header">
+    <a href="/2018/02/23/asciidoc---introduction/">
+    <h1 class="article-title" itemprop="name">
+        AsciiDoc - Introduction
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2018-02-23 22:14:48 &#43;0800 CST" itemprop="datePublished">2018-02-23</time>
+            &middot;
+            321
+            words
+            &middot;
+            2
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="categories/language">Language</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="tags/argparse">ArgParse</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="tags/intro">Intro</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <div class="sect1">
+<h2 id="_introduction">Introduction</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>AsciiDoc is a markup language (similar to Markdown).<br>
+<a href="http://asciidoctor.org/">AsciiDoctor</a> is a tool to generate html (and PDF) from it.</p>
+</div>
+<div class="paragraph">
+<p>Documents have following extension: <strong>.adoc</strong></p>
+</div>
+<div class="paragraph">
+<p>Official documentation can be found in <a href="http://asciidoctor.org/docs/user-manual" class="bare">http://asciidoctor.org/docs/user-manual</a></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+In the command lines listed below ,the <code>$</code> corresponds to the prompt:
+      it shall not be typed when entering the command.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Some nice slides to introduce are available
+<a href="http://mgreau.com/slides/devnation2015/slides.htm">here</a> (done</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_installation">Installation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>More details in <a href="http://asciidoctor.org/#installation" class="bare">http://asciidoctor.org/#installation</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Install Ruby</p>
+</li>
+<li>
+<p>Install asciidoctor</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ gem install asciidoctor</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Install a renderer: <strong>pygments</strong>, <strong>coderay</strong>, or <strong>rouge</strong> [for PDF only]</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ gem install pygments.rb
+$ gem install coderay
+$ gem install rouge</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Install asciidoctor-pdf if you want to generate PDF</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ gem install asciidoctor-pdf --pre</pre>
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You <strong>must</strong> have <strong>Python 2</strong> installed to use <code>pygments</code> renderer:
+<strong>Python 3</strong> is not working.</p>
+</div>
+<div class="paragraph">
+<p>You should have <code>python2</code> in your path.<br>
+(if <code>python</code> refers to <strong>Python 3</strong> it is fine though).</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_usage">Usage</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_possible_outputs">Possible Outputs</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>HTML</p>
+</li>
+<li>
+<p>PDF (<code>asciidoctor-pdf</code>)</p>
+</li>
+<li>
+<p>Slides (by using backends)</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://paulrouget.com/slides/dzslides-introduction.html#1">DZSlides</a></p>
+</li>
+<li>
+<p><a href="https://revealjs.com/">Revealjs</a></p>
+</li>
+<li>
+<p><a href="http://imakewebthings.com/deck.js/">Deck.js</a></p>
+</li>
+<li>
+<p><a href="https://github.com/bespokejs/bespoke">Bespoke.js</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_html">HTML</h3>
+<div class="paragraph">
+<p>To generate html:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ asciidoctor &lt;file&gt;.adoc
+$ asciidoctor -D &lt;outdir&gt; &lt;file&gt;.adoc
+$ asciidoctor -d &lt;outputfile&gt; &lt;file&gt;.adoc</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To have an incremental number for the sections &amp; subsections:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ asciidoctor -n &lt;file&gt;.adoc</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_pdf">PDF</h3>
+<div class="paragraph">
+<p>To generate PDF (after installation of <code>asciidoctor-pdf</code>):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ asciidoctor-pdf &lt;file&gt;.adoc</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_slides">Slides</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Documentation for <strong>Reveal.js</strong> and <strong>Deck.js</strong> are here:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Generating slides with <a href="http://asciidoctor.org/docs/asciidoctor-revealjs/">Reveal.js</a></p>
+</li>
+<li>
+<p>Install and use <a href="http://asciidoctor.org/docs/install-and-use-deckjs-backend/">Deck.js</a> backend</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In most cases, you need the backends (<a href="https://github.com/asciidoctor/asciidoctor-backends" class="bare">https://github.com/asciidoctor/asciidoctor-backends</a>):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/asciidoctor/asciidoctor-backends/tree/master/slim/dzslides">DZSlides</a></p>
+</li>
+<li>
+<p><a href="https://github.com/asciidoctor/asciidoctor-deck.js">Deck.js</a></p>
+</li>
+<li>
+<p><a href="https://github.com/asciidoctor/asciidoctor-reveal.js">Reveal.js</a></p>
+</li>
+<li>
+<p><a href="https://github.com/asciidoctor/asciidoctor-backends/tree/master/slim/bespokejs">Bespek.js</a></p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+An <a href="https://github.com/wackywendell/asciidoctor-reveal.js">alternate version</a> of backend for <strong>Reveal.js</strong>
+has been desribed in <a href="http://blog.lostinmyterminal.com/2015/05/05/asciidoc-slides.html">this blog</a>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_syntax">Syntax</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A summary of the syntax can be found here: <a href="http://asciidoctor.org/docs/asciidoc-syntax-quick-reference" class="bare">http://asciidoctor.org/docs/asciidoc-syntax-quick-reference</a></p>
+</div>
+<div class="listingblock">
+<div class="title">Example.adoc</div>
+<div class="content">
+<pre class="highlight"><code class="language-adoc" data-lang="adoc">Hello here. I like *bold* and _italics_.
+
+This is some text
+on a single line.
+
+This is some text ... +
+on 2 lines.
+
+Here is some code:
+[source, python]
+print("Hello MP")</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And this is how it will look like:</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Hello here. I like <strong>bold</strong> and <em>italics</em>.</p>
+</div>
+<div class="paragraph">
+<p>This is some text
+on a single line.</p>
+</div>
+<div class="paragraph">
+<p>This is some text &#8230;&#8203;<br>
+on 2 lines.</p>
+</div>
+<div class="paragraph">
+<p>Here is some code:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-python" data-lang="python">print("Hello MP")</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+        </div>
+        <footer class="article-footer">
+    <a data-url="/2018/02/23/asciidoc---introduction/" data-id="9eee483b079886b222f09da14e09c94c" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <a href="/2018/02/23/asciidoc---introduction/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+
+    
+<nav id="article-nav">
+    
+    <a href="/2018/02/23/pytest---advanced/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Older
+      </strong>
+      <div class="article-nav-title">Pytest - Advanced</div>
+    </a>
+    
+
+    
+    <a href="/2018/02/23/asciidoc---advanced-topics/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Newer
+      </strong>
+      <div class="article-nav-title">AsciiDoc - Advanced topics</div>
+    </a>
+    
+</nav>
+
+
+</article>
+
+
+<section id="comments">
+    <div id="disqus_thread">
+        <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "https-jfthuong-github-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+</section>
+
+
+    </section>
+
+   	
+    	<aside id="sidebar">
+    
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Recents
+    </h3>
+    <div class="widget">
+        <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="/2018/02/23/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="categories/tool">
+                        Tool
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="/2018/02/23/" class="title"></a></p>
+                    <p class="item-date">
+                        <time datetime="2018-02-23 22:14:48 &#43;0800 CST" itemprop="datePublished">2018-02-23</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="/2018/02/23/argparse---introduction/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="categories/python">
+                        Python
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="/2018/02/23/argparse---introduction/" class="title">ArgParse - Introduction</a></p>
+                    <p class="item-date">
+                        <time datetime="2018-02-23 22:14:48 &#43;0800 CST" itemprop="datePublished">2018-02-23</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="/2018/02/23/asciidoc---advanced-topics/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="categories/language">
+                        Language
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="/2018/02/23/asciidoc---advanced-topics/" class="title">AsciiDoc - Advanced topics</a></p>
+                    <p class="item-date">
+                        <time datetime="2018-02-23 22:14:48 &#43;0800 CST" itemprop="datePublished">2018-02-23</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="/2018/02/23/asciidoc---introduction/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="categories/language">
+                        Language
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="/2018/02/23/asciidoc---introduction/" class="title">AsciiDoc - Introduction</a></p>
+                    <p class="item-date">
+                        <time datetime="2018-02-23 22:14:48 &#43;0800 CST" itemprop="datePublished">2018-02-23</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="/2018/02/23/pytest---advanced/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="categories/python">
+                        Python
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="/2018/02/23/pytest---advanced/" class="title">Pytest - Advanced</a></p>
+                    <p class="item-date">
+                        <time datetime="2018-02-23 22:14:48 &#43;0800 CST" itemprop="datePublished">2018-02-23</time>
+                    </p>
+                </div>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="categories/it">
+                    it
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="categories/language">
+                    language
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="categories/python">
+                    python
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="categories/shell">
+                    shell
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="categories/tool">
+                    tool
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Tags
+    </h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="tags/advanced">
+                    advanced
+                </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="tags/argparse">
+                    argparse
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="tags/asciidoc">
+                    asciidoc
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="tags/boot">
+                    boot
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="tags/intro">
+                    intro
+                </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="tags/pytest">
+                    pytest
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="tags/scons">
+                    scons
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="tags/snippet">
+                    snippet
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="tags/win10">
+                    win10
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Tag cloud
+    </h3>
+    <div class="widget tagcloud">
+        
+        
+        <a href="tags/advanced" style="font-size: 12px;">advanced</a>
+        
+        
+        <a href="tags/argparse" style="font-size: 12px;">argparse</a>
+        
+        
+        <a href="tags/asciidoc" style="font-size: 12px;">asciidoc</a>
+        
+        
+        <a href="tags/boot" style="font-size: 12px;">boot</a>
+        
+        
+        <a href="tags/intro" style="font-size: 12px;">intro</a>
+        
+        
+        <a href="tags/pytest" style="font-size: 12px;">pytest</a>
+        
+        
+        <a href="tags/scons" style="font-size: 12px;">scons</a>
+        
+        
+        <a href="tags/snippet" style="font-size: 12px;">snippet</a>
+        
+        
+        <a href="tags/win10" style="font-size: 12px;">win10</a>
+        
+    </div>
+</div>
+
+
+
+
+
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+
+    
+	</div>
+</div>
+
+<footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018
+      Powered by <a href="//gohugo.io">Hugo</a>.
+    </div>
+  </div>
+</footer>
+
+
+<script src="fancybox/jquery.fancybox.pack.js"></script>
+<script src="js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,150 @@
+---
+title: "SCons - Advanced"
+date: 2018-02-23T22:14:48+08:00
+draft: false
+tags: ["SCons", "Advanced"]
+categories: ["Tool"]
+toc: true
+description: "Advanced topics for SCons"
+banner: ""
+images: []
+---
+
+= Advanced topics to SCons
+:author: Jean-Francois Thuong
+:source-highlighter: pygments
+:pygments-style: manni
+:source-language: python
+:toc:
+
+== Controlling Output
+
+Extract from this section: http://scons.org/doc/HTML/scons-user.html#chap-output
+
+=== Help function
+
+You can specify some help message:
+
+[source]
+Help("""
+Type: 'scons program' to build the production program,
+      'scons debug' to build the debug version.
+""")  # You can append to existing message with 'append=True'
+
+The help message is display with
+----
+$ scons -h
+----
+
+=== Progress function
+
+This function helps to show which files are evaluated to decide if they are up-to-date or not.
+
+[source]
+Progress('Evaluating $TARGET\n')
+Program('f1.c')
+Program('f2.c')
+
+You can some options to write in a file for example
+[source]
+Progress('$TARGET\r',
+         file=open('build.log', 'w'),
+         overwrite=True)
+Program('f1.c')
+Program('f2.c')
+
+Or even write your own function
+[source]
+----
+def progress_function(node)
+    print("Evaludating %s" % node)
+    # Do something with the node
+
+Progress(progress_function)
+----
+
+== Running any command
+
+The list of built-in builders can be found http://scons.org/pages/download.html[here]. +
+The list of tools it uses can be found http://scons.org/doc/HTML/scons-user.html#app-tools[here].
+
+Additionally, any command can easily be added via the
+http://scons.org/doc/HTML/scons-user.html#chap-builders-commands[Command] Builder.
+
+An example of `Command` Builder with `sed`:
+
+.SConstruct
+[source]
+env = Environment()
+env.Command('foo.out', 'foo.in', "sed 's/x/y/' < $SOURCE > $TARGET")
+
+Another example using a custom Python function:
+
+.SConstruct
+[source]
+----
+def build(target, source, env):
+    # Whatever it takes to build
+    return None
+
+env = Environment()
+env.Command('foo.out', 'foo.in', build)
+----
+
+[TIP]
+====
+You can also use variable expansion
+[source]
+env.Command('${SOURCE.basename}.out', 'foo.in', build)
+====
+
+== Searching in PATH and directories
+
+Refer to http://scons.org/faq.html[FAQ] for more details.
+
+=== Specify `PATH` Environment Variable
+
+The environment variable `PATH` for *SCons* is limited to Python to be system independent.
+
+If you need to have the same `PATH` as your system, you can do the following:
+[source]
+import os
+env = Environment(ENV = {'PATH' : os.environ['PATH']})
+
+If you need the whole same enviroment as in Windows, you can do
+[source]
+import os
+env = Environment(ENV = os.environ)
+
+It is actually better to have a selection of the environment variables in the path. You can
+
+1. Set the paths you want to specify
+2. Add a filtered selection of the paths from your system
+
+.Solution 1
+[source]
+path= ['/bin', '/usr/bin', '/path/to/other/compiler/bin']
+env = Environment(ENV = {'PATH' : path})
+
+.Solution 2
+[source]
+----
+paths = os.environ['PATH'].split(os.pathsep)
+# Only adding Path related to Ruby
+extra_paths = [p for p in paths if 'ruby' in p.lower()]
+cust_path = sys.path + extra_paths
+
+# ENVIRONMENT
+env = Environment(ENV={'PATH':cust_path})
+----
+
+=== Specify folders for `#include` files
+
+If your program has `#include` files in various directories,
+*SCons* must somehow be told in which directories it should look for the `#include` files.
+You do this by setting the `CPPPATH` variable to the list of directories
+that contain *.h* files that you want to search for:
+
+[source]
+env = Environment(CPPPATH='inc')
+env.Program('foo', 'foo.c')

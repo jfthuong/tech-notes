@@ -1,0 +1,148 @@
+---
+title: ""
+date: 2018-02-23T22:14:48+08:00
+draft: false
+tags: ["SCons", "Intro"]
+categories: ["Tool"]
+toc: true
+description: "Introduction to SCons, a software construction tool to replace Makefile"
+banner: ""
+images: []
+---
+
+= Introduction to SCons
+:author: Jean-Francois Thuong
+:source-language: python
+:icons: font
+ifdef::env-github,env-browser[:static: ../../../static]
+ifndef::env-github,env-browser[:static: /static]
+//:static: ../../../static
+:include_dir: {static}/include/SCons
+
+== Purpose
+
+*SCons* is a tool equivalent to Makefile (but better). It is configured by simple Python code.
+
+From the authors:
+[quote, scons.org]
+____
+SCons is an Open Source software construction tool—that is, a next-generation build tool.
+Think of SCons as an improved, cross-platform substitute for the classic Make
+utility with integrated functionality similar to autoconf/automake
+nd compiler caches such as ccache. In short, SCons is an easier,
+more reliable and faster way to build software.
+____
+
+== Features
+
+It is working best with *C/C++* language but can also works out of the box with:
+
+* Java
+* Latex (to PDF)
+* DocBook
+* Archives (tar, zip)
+* Text files
+* etc.
+
+The list of builders can be found http://scons.org/pages/download.html[here] and
+the list of tools it uses can be found http://scons.org/doc/HTML/scons-user.html#app-tools[here].
+
+Additionally, any command can easily be added via the
+http://scons.org/doc/HTML/scons-user.html#chap-builders-commands[Command] Builder.
+
+Some of the highlights of this tool:
+
+* Configuration files are Python scripts--use the power of a real programming language to solve build problems.
+* Reliable, automatic dependency analysis built-in for C, C++ and Fortran
+* Built-in support for C, C++, D, Java, Fortran, Yacc, Lex, Qt and SWIG, and building TeX and LaTeX documents.
+* Easily extensible through user-defined Builders for other languages or file types.
+* Reliable detection of build changes using MD5 signatures; optional, configurable support for traditional timestamps.
+* Integrated Autoconf-like support for finding #include files, libraries, functions and typedefs.
+* Global view of all dependencies
+
+== Links
+
+Official User Guide: http://scons.org/doc/HTML/scons-user.html
+
+== Installation
+
+On Windows:
+
+1. Install *Python*
+2. Download Windows installer from: http://scons.org/pages/download.html
+3. Run the installer
+4. Check SCons has been installed successfully: `scons --version`
+
+NOTE: Although `pip` can find `scons`, it cannot install it. What a pity!
+
+WARNING: SCons is not (yet) compatible with Python 3.x
+
+Another way to install SCons is to build from the sources.
+
+1. Download the sources (*.zip* or *.tar.gz*)
+2. Unzip somewhere and open a command line in that directory
+3. Install with Python: `python setup.py install`
+4. Check the installation: `scons --version`
+
+If you have an issue with installation, please check FAQ.
+
+== A small example
+
+The source file:
+
+.hello.c
+[source,c]
+include::{include_dir}/hello.c[]
+
+The building program (which is using Python syntax):
+
+.SConstruct
+[source]
+Program('hello.c')
+
+The command to run (without the prompt `$`):
+----
+$ scons
+----
+
+And that's it: this will create the program built from _hello.c_.
+
+For information, it will display the following on the console:
+----
+scons: Reading SConscript files ...
+scons: done reading SConscript files.
+scons: Building targets ...
+cc -o hello.o -c hello.c
+cc -o hello hello.o
+scons: done building targets.
+----
+
+And if you want to do a clean-up, *SCons* will automatically decide what needs to be done.
+You just need to call with `-c` option (or `--clean` if you prefer).
+----
+$ scons -c
+----
+
+== FAQ
+
+=== "Command not found" when running `scons`
+
+First, install *SCons* with `python setup.py install` method.
+
+Then, go to your Python installation directory
+and put either of the following files in subfolder *Scripts*:
+
+* `scons.bat` if you run scons from *cmd*
+* `scons` if you run scons from *Msys* or *Cygwin*
+
+.<Python_dir>/Scripts/scons.bat
+[source, bat, linenums]
+----
+include::{include_dir}/scons.bat[]
+----
+
+.<Python_dir>/Scripts/scons
+[source, shell, linenums]
+----
+include::{include_dir}/scons[]
+----

@@ -1,0 +1,202 @@
+---
+title: "AsciiDoc - Advanced topics"
+date: 2018-02-23T22:14:48+08:00
+draft: false
+tags: ["AsciiDoc", "Advanced"]
+categories: ["Language"]
+toc: true
+description: "Advanced topics for AsciiDoc"
+banner: ""
+images: []
+---
+
+= Advanced topics for AsciiDoc
+:author: Jean-Francois Thuong
+:icons: font
+
+== Syntax
+
+The whole syntax can be found in the User Manual: http://asciidoctor.org/docs/user-manual
+
+NOTE: the source of User Manual can be found
+https://github.com/asciidoctor/asciidoctor.org/blob/master/docs/user-manual.adoc[here]
+
+
+=== Code HighLight
+
+More details here: http://asciidoctor.org/docs/user-manual/#source-code-blocks
+
+==== How to hightlight?
+
+Just add the following at the head of your *.adoc* document under the title
+[source,adoc]
+----
+:source-highlighter: <renderer>
+----
+
+The following renderer exists:
+
+* `pygments`
+* `coderay`
+* `rouge` [pdf only]
+* `prettify` [html only]
+* `highlightjs` [html only]
+
+[TIP]
+====
+I recommend the renderer *pygments* (both compatible with HTML and PDF):
+
+[source,adoc]
+----
+:source-highlighter: pygments
+:pygments-style: manni
+:pygments-linenums-mode: inline
+----
+====
+
+
+Highlighted code can be added either syntax:
+
+[source,adoc]
+----
+[source,<language>]
+# The code without any blank line (single pragraph)
+----
+or
+[source,adoc]
+....
+[source,python]
+----
+# Your Python code ...
+
+# ... with empty lines
+----
+....
+
+You can add number of lines by adding `linenums` at the end of `[source]` markup:
+[source,adoc]
+----
+[source,python,linenums]
+----
+
+[NOTE]
+====
+Line numbers is (so far) only supported by `asciidoc-pdf` when using `rouge`.
+See Issue https://github.com/asciidoctor/asciidoctor-pdf/issues/224[#224] for details.
+
+You can force the usage of `rouge` with following option in command line: +
+`-a source-highlighter=rouge`
+====
+
+You can also add the name of the file by adding `.<filename>` before the `[source]` markup:
+[source,adoc]
+----
+.example.py
+[source,python]
+----
+
+Also, you can defined a default language by adding this line in the header
+(example of Python):
+[source]
+----
+:source-language: python
+----
+
+==== Example
+
+This is an example of how syntax highlight can look like:
+
+.example.py
+[source,python,linenums]
+----
+import logging
+
+def printErr(msg, type='error'):
+    sys.stderr.write (msg + "\n")
+    logging.info (msg)
+    status[type] += 1
+
+
+class DICT_2_OBJ(object):
+    '''Class to tranform a dictionary into an object'''
+    def __init__(self, fields): self.__dict__=fields
+
+class TestCase():
+    """"
+    Generic class for Test Case
+    """
+    def __init__(self, id='TC-UNKNOWN', tp=None):
+        self.id = id
+        self.reqs = list()
+        self.tp = tp
+
+    def __lt__(self, other):
+        return self.id < other.id
+----
+
+
+=== Using Icons
+
+.Icons
+****
+Icons are used for admonition labels, callout numbers and inline symbols.
+Asciidoctor provides three strategies for display icons:
+as *text*, as *images* or as a *characters* selected from an icon font.
+The strategy is controlled using the icons attribute.
+The default behavior is to display the fallback text.
+****
+
+The easiest way is to use font-based icons:
+[source]
+----
+:icons: font
+----
+
+For other possibilities, refer to
+http://asciidoctor.org/docs/user-manual/#icons[User Manual]
+
+
+You can use font icons like this:
+[source]
+icon:wechat[]
+
+And this will how it will look like: icon:wechat[]
+
+
+The font icons are based on *Font Awesome*; a list of available icons can be found here: +
+https://fontawesome.com
+
+TIP: Usually, the version supported is not that latest one. +
+You might use the version https://fontawesome.com/v4.7.0/icons/[4.7.0] as a reference
+
+You can even animate icons with `spin` or `pulse`:
+[source]
+icon:cog[spin]
+icon:spinner[pulse]
+
+This will look like this: icon:cog[spin] and icon:spinner[pulse]
+
+
+
+== AsciiDoc-PDF
+
+=== Set up a format
+
+Refer to https://github.com/asciidoctor/asciidoctor-pdf/blob/master/docs/theming-guide.adoc[Theming Guide].
+
+Themes are defined in *YAML* format and are loaded via the command line
+
+ asciidoctor-pdf <options> -a pdf-style=<theme.yml> <input.adoc>
+
+For example, the following can set-up a page in landscape format:
+
+.theme_landscape.yml
+[source, yml]
+page:
+  layout: landscape
+
+TIP: While the _yml_ file above works,
+it is better (i.e. looks nicer) to use
+https://github.com/asciidoctor/asciidoctor-pdf/blob/master/data/themes/default-theme.yml[_default_theme.yml_]
+in GitHub and update the values you want to change.
+

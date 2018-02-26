@@ -2,27 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Argparse on Training Materials</title>
-    <link>https://jfthuong.github.io/tech-notes/tags/argparse/</link>
+    <link>/tags/argparse/</link>
     <description>Recent content in Argparse on Training Materials</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Hugo](//gohugo.io).</copyright>
     <lastBuildDate>Fri, 23 Feb 2018 22:14:48 +0800</lastBuildDate>
     
-	<atom:link href="https://jfthuong.github.io/tech-notes/tags/argparse/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/argparse/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Introduction to ArgParse</title>
-      <link>https://jfthuong.github.io/tech-notes/2018/02/23/introduction-to-argparse/</link>
+      <title>ArgParse - Introduction</title>
+      <link>/2018/02/23/argparse---introduction/</link>
       <pubDate>Fri, 23 Feb 2018 22:14:48 +0800</pubDate>
       
-      <guid>https://jfthuong.github.io/tech-notes/2018/02/23/introduction-to-argparse/</guid>
-      <description>&lt;div id=&#34;preamble&#34;&gt;
-&lt;div class=&#34;sectionbody&#34;&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;This is an example of AsciiDoc File.&lt;/p&gt;
-&lt;/div&gt;</description>
+      <guid>/2018/02/23/argparse---introduction/</guid>
+      <description>Purpose The module argparse can be used to parse options and arguments when launching a Python script.
+   Links   PyMOTW (Python Module of the Week): provides a great description of most modules with clear examples.
+     Installation Module already installed with ActivePython.
+ However, it could be updated with following command
+ $ pip install -U argparse     Example of code from argparse import ArgumentParser, SUPPRESS def do_something(options): &#39;&#39;&#39;A function that does something&#39;&#39;&#39; print(str(options)) if __name__ == &#39;__main__&#39;: prog = &#34;</description>
+    </item>
+    
+    <item>
+      <title>AsciiDoc - Introduction</title>
+      <link>/2018/02/23/asciidoc---introduction/</link>
+      <pubDate>Fri, 23 Feb 2018 22:14:48 +0800</pubDate>
+      
+      <guid>/2018/02/23/asciidoc---introduction/</guid>
+      <description>Introduction AsciiDoc is a markup language (similar to Markdown).
+AsciiDoctor is a tool to generate html (and PDF) from it.
+ Documents have following extension: .adoc
+ Official documentation can be found in http://asciidoctor.org/docs/user-manual
+     In the command lines listed below ,the $ corresponds to the prompt: it shall not be typed when entering the command.     Some nice slides to introduce are available here (done</description>
     </item>
     
   </channel>

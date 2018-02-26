@@ -2,21 +2,57 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Training Materials</title>
-    <link>https://jfthuong.github.io/tech-notes/categories/</link>
+    <link>/categories/</link>
     <description>Recent content in Categories on Training Materials</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Hugo](//gohugo.io).</copyright>
     
-	<atom:link href="https://jfthuong.github.io/tech-notes/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Python</title>
-      <link>https://jfthuong.github.io/tech-notes/categories/python/</link>
+      <title>It</title>
+      <link>/categories/it/</link>
+      <pubDate>Mon, 26 Feb 2018 09:14:48 +0800</pubDate>
+      
+      <guid>/categories/it/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Language</title>
+      <link>/categories/language/</link>
       <pubDate>Fri, 23 Feb 2018 22:14:48 +0800</pubDate>
       
-      <guid>https://jfthuong.github.io/tech-notes/categories/python/</guid>
+      <guid>/categories/language/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>/categories/python/</link>
+      <pubDate>Fri, 23 Feb 2018 22:14:48 +0800</pubDate>
+      
+      <guid>/categories/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Shell</title>
+      <link>/categories/shell/</link>
+      <pubDate>Fri, 23 Feb 2018 22:14:48 +0800</pubDate>
+      
+      <guid>/categories/shell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tool</title>
+      <link>/categories/tool/</link>
+      <pubDate>Fri, 23 Feb 2018 22:14:48 +0800</pubDate>
+      
+      <guid>/categories/tool/</guid>
       <description></description>
     </item>
     

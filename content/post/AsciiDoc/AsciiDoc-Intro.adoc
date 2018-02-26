@@ -1,0 +1,134 @@
+---
+title: "AsciiDoc - Introduction"
+date: 2018-02-23T22:14:48+08:00
+draft: false
+tags: ["ArgParse", "Intro"]
+categories: ["Language"]
+toc: true
+description: "Introduction to AsciiDoc, an alternative to Markdown"
+banner: ""
+images: []
+---
+
+= Introduction to AsciiDoc
+:author: Jean-Fracois Thuong
+ifdef::env-github,env-browser[:static: ../../../static]
+ifndef::env-github,env-browser[:static: /static]
+//:static: ../../../static
+:icons: font
+
+== Introduction
+
+AsciiDoc is a markup language (similar to Markdown). +
+http://asciidoctor.org/[AsciiDoctor] is a tool to generate html (and PDF) from it.
+
+Documents have following extension: *.adoc*
+
+Official documentation can be found in http://asciidoctor.org/docs/user-manual
+
+NOTE: In the command lines listed below ,the `$` corresponds to the prompt:
+      it shall not be typed when entering the command.
+
+
+Some nice slides to introduce are available
+http://mgreau.com/slides/devnation2015/slides.htm[here] (done
+
+
+== Installation
+
+More details in http://asciidoctor.org/#installation
+
+* Install Ruby
+* Install asciidoctor
+----
+$ gem install asciidoctor
+----
+* Install a renderer: *pygments*, *coderay*, or *rouge* [for PDF only]
+----
+$ gem install pygments.rb
+$ gem install coderay
+$ gem install rouge
+----
+* Install asciidoctor-pdf if you want to generate PDF
+[source, sh]
+----
+$ gem install asciidoctor-pdf --pre
+----
+
+[IMPORTANT]
+====
+You *must* have *Python 2* installed to use `pygments` renderer:
+*Python 3* is not working.
+
+You should have `python2` in your path. +
+(if `python` refers to *Python 3* it is fine though).
+====
+
+== Usage
+
+
+=== Possible Outputs
+
+* HTML
+* PDF (`asciidoctor-pdf`)
+* Slides (by using backends)
+    ** http://paulrouget.com/slides/dzslides-introduction.html#1[DZSlides]
+    ** https://revealjs.com/[Revealjs]
+    ** http://imakewebthings.com/deck.js/[Deck.js]
+    ** https://github.com/bespokejs/bespoke[Bespoke.js]
+
+
+=== HTML
+To generate html:
+----
+$ asciidoctor <file>.adoc
+$ asciidoctor -D <outdir> <file>.adoc
+$ asciidoctor -d <outputfile> <file>.adoc
+----
+
+To have an incremental number for the sections & subsections:
+----
+$ asciidoctor -n <file>.adoc
+----
+
+=== PDF
+
+To generate PDF (after installation of `asciidoctor-pdf`):
+----
+$ asciidoctor-pdf <file>.adoc
+----
+
+== Slides
+
+Documentation for *Reveal.js* and *Deck.js* are here:
+
+* Generating slides with http://asciidoctor.org/docs/asciidoctor-revealjs/[Reveal.js]
+* Install and use http://asciidoctor.org/docs/install-and-use-deckjs-backend/[Deck.js] backend
+
+In most cases, you need the backends (https://github.com/asciidoctor/asciidoctor-backends):
+
+* https://github.com/asciidoctor/asciidoctor-backends/tree/master/slim/dzslides[DZSlides]
+* https://github.com/asciidoctor/asciidoctor-deck.js[Deck.js]
+* https://github.com/asciidoctor/asciidoctor-reveal.js[Reveal.js]
+* https://github.com/asciidoctor/asciidoctor-backends/tree/master/slim/bespokejs[Bespek.js]
+
+NOTE: An https://github.com/wackywendell/asciidoctor-reveal.js[alternate version] of backend for *Reveal.js*
+has been desribed in http://blog.lostinmyterminal.com/2015/05/05/asciidoc-slides.html[this blog].
+
+
+== Syntax
+
+A summary of the syntax can be found here: http://asciidoctor.org/docs/asciidoc-syntax-quick-reference
+
+
+
+.Example.adoc
+[source, adoc]
+----
+include::{static}/include/AsciiDoc/Example.adoc[]
+----
+
+And this is how it will look like:
+****
+include::{static}/include/AsciiDoc/Example.adoc[]
+****

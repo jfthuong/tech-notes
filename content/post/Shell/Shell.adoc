@@ -1,0 +1,49 @@
+---
+title: "Shell - useful code"
+date: 2018-02-23T22:14:48+08:00
+draft: false
+tags: ["Snippet"]
+categories: ["Shell"]
+toc: true
+description: "Some useful code for Shell"
+banner: ""
+images: []
+---
+
+
+
+= Shell
+:author: Jean-Francois Thuong
+:source-highlighter: pygments
+:pygments-style: manni
+:source-language: shell
+:toc:
+
+[[shell-commands]]
+== Shell commands
+
+=== Operations on arguments
+
+Checking if an argument has been defined:
+
+[source]
+----
+if [ "$1" == "" ]; then
+    # No argument found
+else
+    # At least one argument
+fi
+----
+
+Parsing from the 2nd argument:
+
+[source]
+----
+if [ "$1" == "clean" ]; then
+    clean=1
+    args="${@:2}"
+else
+    clean=0
+    args="$@"
+fi
+----

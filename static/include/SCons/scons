@@ -1,0 +1,28 @@
+#!/bin/bash 
+
+# Script to launch scons from MSys or Cygwin
+# Inspired by scons.bat delivered with SCons
+
+# Ensure the script will be executed with the Python it was installed for
+BASEDIR=$(dirname "$0")
+PATH="$BASEDIR:$BASEDIR/..:$PATH"
+
+# Try the script named as the .bat file in current dir, then in Scripts subdir
+BASENAME=$(basename "$0")
+SCRIPT=${BASENAME%.*}
+SCRIPTNAME="$BASEDIR/$SCRIPT.py"
+if ! [ -f "$SCRIPTNAME" ]; then
+	SCRIPTNAME="$BASEDIR/Scripts/$SCRIPT.py"
+fi
+
+# Run
+python "$SCRIPTNAME" $@
+SCONS_ERRORLEVEL=$?
+
+# Check error code
+if [ SCONS_ERRORLEVEL == 9009 ]; then
+	echo "You do not have python in your PATH"
+fi
+
+# End
+exit $SCONS_ERRORLEVEL
