@@ -1,0 +1,83 @@
+---
+title: "Booting in SafeMode with Win10 without login"
+date: 2018-02-26T09:14:48+08:00
+draft: false
+tags: ["Win10", "Boot"]
+categories: ["IT"]
+toc: true
+description: ""
+banner: ""
+images: []
+---
+
+= Booting in SafeMode with Win10 without login
+
+This page is describing how to boot in Safe Mode when Windows 10 is installed on the machine
+and the user cannot access the login screen.
+
+<!--more-->
+
+== Open Command Prompt
+
+1. Boot from Windows 10 installation disk (or repair disk)
+2. Select your language and keyboard (or just click on *Next*)
+3. Sele ct *Repair your computer*
+4. Select *Troubleshoot*
+5. Select *Advanced options*
+6. And finally *Command Prompt*
+
+== Set Safemode
+
+With Command Prompt open, execute the correct `bcdedit` command as shown below based
+on which Safe Mode option you'd like to start:
+
+* *Safe Mode*:
+
+    bcdedit /set {default} safeboot minimal
+
+* *Safe Mode with Networking*:
+
+    bcdedit /set {default} safeboot network
+
+* *Safe Mode with Command Prompt*:
+
+    bcdedit /set {default} safeboot minimal
+    bcdedit /set {default} safebootalternateshell yes
+
+TIP: Be sure to type whatever command you choose exactly as shown and then execute it using the Enter key.
+Spaces are very important!
+Two separate commands are required to start Safe Mode with Command Prompt, so be sure to execute them both.
+
+
+A properly executed `bcdedit` command should return the following message:
+
+    The operation completed successfully
+
+If you see any of the following messages, be sure tha you have typed the commands properly
+
+    The parameter is incorrect
+    The set command specified is not valid
+    ... is not recognized as an internal or external command...
+
+== Reboot
+
+1. Close the Command Prompt window.
+2. Tap or click on Continue.
+3. Once Windows starts, log in as you normally do and use Safe Mode however you were planning.
+
+IMPORTANT: Windows will continue to start in Safe Mode every time you reboot unless you undo safe mode.
+See next section for more details.
+
+
+== Stopping Safe Mode at next restart
+
+The easiest way to do that is not by executing more commands,
+but via System Configuration. See How to Start Windows in Safe Mode Using System Configuration and follow steps 8 through 11 in that tutorial.
+
+
+If Windows is stuck in a sort of "Safe Mode Loop," preventing you from starting in normal mode again, and you've tried the instructions I gave in the Important call-out from Step 8 above but haven't been successful, try this:
+
+Start Command Prompt from outside of Windows, the process outlined in Steps 1 and 2 above.
+Once Command Prompt is open, execute this command:
+bcdedit /deletevalue {default} safeboot
+Assuming it was successfully executed (see Step 4 above), restart your computer and Windows should then start normally.
