@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Training Materials</title>
-    <link>/</link>
-    <description>Recent content on Training Materials</description>
+    <title>Technical Notes</title>
+    <link>https://jfthuong.github.io/tech-notes/</link>
+    <description>Recent content on Technical Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Hugo](//gohugo.io).</copyright>
     <lastBuildDate>Mon, 26 Feb 2018 09:14:48 +0800</lastBuildDate>
     
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jfthuong.github.io/tech-notes/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Booting in SafeMode with Win10 without login</title>
-      <link>/it_support/safe_mode_win10_no_login/</link>
+      <link>https://jfthuong.github.io/tech-notes/it_support/safe_mode_win10_no_login/</link>
       <pubDate>Mon, 26 Feb 2018 09:14:48 +0800</pubDate>
       
-      <guid>/it_support/safe_mode_win10_no_login/</guid>
+      <guid>https://jfthuong.github.io/tech-notes/it_support/safe_mode_win10_no_login/</guid>
       <description>&lt;div id=&#34;preamble&#34;&gt;
 &lt;div class=&#34;sectionbody&#34;&gt;
 &lt;div class=&#34;paragraph&#34;&gt;
@@ -27,22 +27,11 @@ and the user cannot access the login screen.&lt;/p&gt;
     </item>
     
     <item>
-      <title></title>
-      <link>/2018/02/23/</link>
-      <pubDate>Fri, 23 Feb 2018 22:14:48 +0800</pubDate>
-      
-      <guid>/2018/02/23/</guid>
-      <description>Purpose SCons is a tool equivalent to Makefile (but better). It is configured by simple Python code.
- From the authors:
-  SCons is an Open Source software construction tool—that is, a next-generation build tool. Think of SCons as an improved, cross-platform substitute for the classic Make utility with integrated functionality similar to autoconf/automake nd compiler caches such as ccache. In short, SCons is an easier, more reliable and faster way to build software.</description>
-    </item>
-    
-    <item>
       <title>ArgParse - Introduction</title>
-      <link>/2018/02/23/argparse---introduction/</link>
+      <link>https://jfthuong.github.io/tech-notes/2018/02/23/argparse---introduction/</link>
       <pubDate>Fri, 23 Feb 2018 22:14:48 +0800</pubDate>
       
-      <guid>/2018/02/23/argparse---introduction/</guid>
+      <guid>https://jfthuong.github.io/tech-notes/2018/02/23/argparse---introduction/</guid>
       <description>Purpose The module argparse can be used to parse options and arguments when launching a Python script.
    Links   PyMOTW (Python Module of the Week): provides a great description of most modules with clear examples.
      Installation Module already installed with ActivePython.
@@ -52,10 +41,10 @@ and the user cannot access the login screen.&lt;/p&gt;
     
     <item>
       <title>AsciiDoc - Advanced topics</title>
-      <link>/2018/02/23/asciidoc---advanced-topics/</link>
+      <link>https://jfthuong.github.io/tech-notes/2018/02/23/asciidoc---advanced-topics/</link>
       <pubDate>Fri, 23 Feb 2018 22:14:48 +0800</pubDate>
       
-      <guid>/2018/02/23/asciidoc---advanced-topics/</guid>
+      <guid>https://jfthuong.github.io/tech-notes/2018/02/23/asciidoc---advanced-topics/</guid>
       <description>Syntax The whole syntax can be found in the User Manual: http://asciidoctor.org/docs/user-manual
      the source of User Manual can be found here     Code HighLight More details here: http://asciidoctor.org/docs/user-manual/#source-code-blocks
  How to hightlight? Just add the following at the head of your .adoc document under the title
@@ -66,10 +55,10 @@ and the user cannot access the login screen.&lt;/p&gt;
     
     <item>
       <title>AsciiDoc - Introduction</title>
-      <link>/2018/02/23/asciidoc---introduction/</link>
+      <link>https://jfthuong.github.io/tech-notes/2018/02/23/asciidoc---introduction/</link>
       <pubDate>Fri, 23 Feb 2018 22:14:48 +0800</pubDate>
       
-      <guid>/2018/02/23/asciidoc---introduction/</guid>
+      <guid>https://jfthuong.github.io/tech-notes/2018/02/23/asciidoc---introduction/</guid>
       <description>Introduction AsciiDoc is a markup language (similar to Markdown).
 AsciiDoctor is a tool to generate html (and PDF) from it.
  Documents have following extension: .adoc
@@ -79,10 +68,10 @@ AsciiDoctor is a tool to generate html (and PDF) from it.
     
     <item>
       <title>Pytest - Advanced</title>
-      <link>/2018/02/23/pytest---advanced/</link>
+      <link>https://jfthuong.github.io/tech-notes/2018/02/23/pytest---advanced/</link>
       <pubDate>Fri, 23 Feb 2018 22:14:48 +0800</pubDate>
       
-      <guid>/2018/02/23/pytest---advanced/</guid>
+      <guid>https://jfthuong.github.io/tech-notes/2018/02/23/pytest---advanced/</guid>
       <description>Passing parameters in the command line In your pytest:
  test_module.py @pytest.mark.unit def test_print_name(name): print (&#34;Displaying name: %s&#34; % name)   In your configuration:
  conftest.py def pytest_addoption(parser): parser.addoption(&#34;--name&#34;, action=&#34;store&#34;, default=&#34;default name&#34;) def pytest_generate_tests(metafunc): # This is called for every test. Only get/set command line arguments # if the argument is specified in the list of test &#34;fixturenames&#34;. option_value = metafunc.config.option.name if &#39;name&#39; in metafunc.fixturenames and option_value is not None: metafunc.</description>
@@ -90,21 +79,32 @@ AsciiDoctor is a tool to generate html (and PDF) from it.
     
     <item>
       <title>SCons - Advanced</title>
-      <link>/2018/02/23/scons---advanced/</link>
+      <link>https://jfthuong.github.io/tech-notes/2018/02/23/scons---advanced/</link>
       <pubDate>Fri, 23 Feb 2018 22:14:48 +0800</pubDate>
       
-      <guid>/2018/02/23/scons---advanced/</guid>
+      <guid>https://jfthuong.github.io/tech-notes/2018/02/23/scons---advanced/</guid>
       <description>Table of Contents Controlling Output Help function Progress function   Running any command Searching in PATH and directories Specify PATH Environment Variable Specify folders for #include files     Controlling Output Extract from this section: http://scons.org/doc/HTML/scons-user.html#chap-output
  Help function You can specify some help message:
  Help(&amp;quot;&amp;quot;&amp;quot; Type: &amp;#39;scons program&amp;#39; to build the production program, &amp;#39;scons debug&amp;#39; to build the debug version. &amp;quot;&amp;quot;&amp;quot;) # You can append to existing message with &amp;#39;append=True&amp;#39;   The help message is display with</description>
     </item>
     
     <item>
-      <title>Shell - useful code</title>
-      <link>/2018/02/23/shell---useful-code/</link>
+      <title>Scons - Introduction</title>
+      <link>https://jfthuong.github.io/tech-notes/2018/02/23/scons---introduction/</link>
       <pubDate>Fri, 23 Feb 2018 22:14:48 +0800</pubDate>
       
-      <guid>/2018/02/23/shell---useful-code/</guid>
+      <guid>https://jfthuong.github.io/tech-notes/2018/02/23/scons---introduction/</guid>
+      <description>Purpose SCons is a tool equivalent to Makefile (but better). It is configured by simple Python code.
+ From the authors:
+  SCons is an Open Source software construction tool—that is, a next-generation build tool. Think of SCons as an improved, cross-platform substitute for the classic Make utility with integrated functionality similar to autoconf/automake nd compiler caches such as ccache. In short, SCons is an easier, more reliable and faster way to build software.</description>
+    </item>
+    
+    <item>
+      <title>Shell - useful code</title>
+      <link>https://jfthuong.github.io/tech-notes/2018/02/23/shell---useful-code/</link>
+      <pubDate>Fri, 23 Feb 2018 22:14:48 +0800</pubDate>
+      
+      <guid>https://jfthuong.github.io/tech-notes/2018/02/23/shell---useful-code/</guid>
       <description>Table of Contents Shell commands Operations on arguments     Shell commands Operations on arguments Checking if an argument has been defined:
  if [ &amp;quot;$1&amp;quot; == &amp;quot;&amp;quot; ]; then # No argument found else # At least one argument fi   Parsing from the 2nd argument:
  if [ &amp;quot;$1&amp;quot; == &amp;quot;clean&amp;quot; ]; then clean=1 args=&amp;quot;${@:2}&amp;quot; else clean=0 args=&amp;quot;$@&amp;quot; fi      </description>

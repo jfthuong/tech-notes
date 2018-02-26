@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Asciidoc on Training Materials</title>
-    <link>/tags/asciidoc/</link>
-    <description>Recent content in Asciidoc on Training Materials</description>
+    <title>Asciidoc on Technical Notes</title>
+    <link>https://jfthuong.github.io/tech-notes/tags/asciidoc/</link>
+    <description>Recent content in Asciidoc on Technical Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Hugo](//gohugo.io).</copyright>
     <lastBuildDate>Fri, 23 Feb 2018 22:14:48 +0800</lastBuildDate>
     
-	<atom:link href="/tags/asciidoc/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jfthuong.github.io/tech-notes/tags/asciidoc/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>AsciiDoc - Advanced topics</title>
-      <link>/2018/02/23/asciidoc---advanced-topics/</link>
+      <link>https://jfthuong.github.io/tech-notes/2018/02/23/asciidoc---advanced-topics/</link>
       <pubDate>Fri, 23 Feb 2018 22:14:48 +0800</pubDate>
       
-      <guid>/2018/02/23/asciidoc---advanced-topics/</guid>
+      <guid>https://jfthuong.github.io/tech-notes/2018/02/23/asciidoc---advanced-topics/</guid>
       <description>Syntax The whole syntax can be found in the User Manual: http://asciidoctor.org/docs/user-manual
      the source of User Manual can be found here     Code HighLight More details here: http://asciidoctor.org/docs/user-manual/#source-code-blocks
  How to hightlight? Just add the following at the head of your .adoc document under the title

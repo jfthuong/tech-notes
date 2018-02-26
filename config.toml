@@ -1,6 +1,6 @@
 baseurl = "https://jfthuong.github.io/tech-notes/"
 languageCode = "en-us"
-title = "Training Materials"
+title = "Technical Notes"
 # Enable comments by entering your Disqus shortname
 disqusShortname = "https-jfthuong-github-io"
 # Enable Google Analytics by entering your tracking code
@@ -22,9 +22,9 @@ publishDir = "docs"
 [params]
     # Tell me who you are
     author = "Jean-Francois Thuong"
-    bio = "Learner - Programmer - Trainer"
+    bio = "In love with learning and sharing"
     location = "Shanghai, China"
-    site_description = ""
+    site_description = "Technical Notes from Jeff Thuong"
     copyright  = "Powered by [Hugo](//gohugo.io)."
     avatar = "css/images/avatar.png"
     # Enter your email address to display your Gravatar icon in the profile. If not set the theme

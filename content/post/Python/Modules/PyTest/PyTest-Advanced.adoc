@@ -15,7 +15,7 @@ images: []
 :icons: font
 :source-language: python
 
-=== Passing parameters in the command line
+== Passing parameters in the command line
 
 In your pytest:
 

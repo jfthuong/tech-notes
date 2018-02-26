@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Pytest on Training Materials</title>
-    <link>/tags/pytest/</link>
-    <description>Recent content in Pytest on Training Materials</description>
+    <title>Pytest on Technical Notes</title>
+    <link>https://jfthuong.github.io/tech-notes/tags/pytest/</link>
+    <description>Recent content in Pytest on Technical Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Hugo](//gohugo.io).</copyright>
     <lastBuildDate>Fri, 23 Feb 2018 22:14:48 +0800</lastBuildDate>
     
-	<atom:link href="/tags/pytest/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jfthuong.github.io/tech-notes/tags/pytest/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Pytest - Advanced</title>
-      <link>/2018/02/23/pytest---advanced/</link>
+      <link>https://jfthuong.github.io/tech-notes/2018/02/23/pytest---advanced/</link>
       <pubDate>Fri, 23 Feb 2018 22:14:48 +0800</pubDate>
       
-      <guid>/2018/02/23/pytest---advanced/</guid>
+      <guid>https://jfthuong.github.io/tech-notes/2018/02/23/pytest---advanced/</guid>
       <description>Passing parameters in the command line In your pytest:
  test_module.py @pytest.mark.unit def test_print_name(name): print (&#34;Displaying name: %s&#34; % name)   In your configuration:
  conftest.py def pytest_addoption(parser): parser.addoption(&#34;--name&#34;, action=&#34;store&#34;, default=&#34;default name&#34;) def pytest_generate_tests(metafunc): # This is called for every test. Only get/set command line arguments # if the argument is specified in the list of test &#34;fixturenames&#34;. option_value = metafunc.config.option.name if &#39;name&#39; in metafunc.fixturenames and option_value is not None: metafunc.</description>

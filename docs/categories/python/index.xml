@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Python on Training Materials</title>
-    <link>/categories/python/</link>
-    <description>Recent content in Python on Training Materials</description>
+    <title>Python on Technical Notes</title>
+    <link>https://jfthuong.github.io/tech-notes/categories/python/</link>
+    <description>Recent content in Python on Technical Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Hugo](//gohugo.io).</copyright>
     <lastBuildDate>Fri, 23 Feb 2018 22:14:48 +0800</lastBuildDate>
     
-	<atom:link href="/categories/python/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jfthuong.github.io/tech-notes/categories/python/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>ArgParse - Introduction</title>
-      <link>/2018/02/23/argparse---introduction/</link>
+      <link>https://jfthuong.github.io/tech-notes/2018/02/23/argparse---introduction/</link>
       <pubDate>Fri, 23 Feb 2018 22:14:48 +0800</pubDate>
       
-      <guid>/2018/02/23/argparse---introduction/</guid>
+      <guid>https://jfthuong.github.io/tech-notes/2018/02/23/argparse---introduction/</guid>
       <description>Purpose The module argparse can be used to parse options and arguments when launching a Python script.
    Links   PyMOTW (Python Module of the Week): provides a great description of most modules with clear examples.
      Installation Module already installed with ActivePython.
@@ -27,10 +27,10 @@
     
     <item>
       <title>Pytest - Advanced</title>
-      <link>/2018/02/23/pytest---advanced/</link>
+      <link>https://jfthuong.github.io/tech-notes/2018/02/23/pytest---advanced/</link>
       <pubDate>Fri, 23 Feb 2018 22:14:48 +0800</pubDate>
       
-      <guid>/2018/02/23/pytest---advanced/</guid>
+      <guid>https://jfthuong.github.io/tech-notes/2018/02/23/pytest---advanced/</guid>
       <description>Passing parameters in the command line In your pytest:
  test_module.py @pytest.mark.unit def test_print_name(name): print (&#34;Displaying name: %s&#34; % name)   In your configuration:
  conftest.py def pytest_addoption(parser): parser.addoption(&#34;--name&#34;, action=&#34;store&#34;, default=&#34;default name&#34;) def pytest_generate_tests(metafunc): # This is called for every test. Only get/set command line arguments # if the argument is specified in the list of test &#34;fixturenames&#34;. option_value = metafunc.config.option.name if &#39;name&#39; in metafunc.fixturenames and option_value is not None: metafunc.</description>

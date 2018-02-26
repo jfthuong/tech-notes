@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <title>SCons - Advanced &middot; Training Materials</title>
+    <title>SCons - Advanced &middot; Technical Notes</title>
     <meta name="generator" content="Hugo 0.34" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -10,20 +10,20 @@
       <meta name="description" content="Advanced topics for SCons">
     
     
-    <link rel="canonical" href="/2018/02/23/scons---advanced/"/>
-    <link rel="icon" href="favicon.ico">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/monokai.css">
-    <link rel="stylesheet" href="fancybox/jquery.fancybox.css">
+    <link rel="canonical" href="https://jfthuong.github.io/tech-notes/2018/02/23/scons---advanced/"/>
+    <link rel="icon" href="https://jfthuong.github.io/tech-notes/favicon.ico">
+    <link rel="apple-touch-icon" href="https://jfthuong.github.io/tech-notes/apple-touch-icon.png"/>
+    <link rel="stylesheet" href="https://jfthuong.github.io/tech-notes/css/style.css">
+    <link rel="stylesheet" href="https://jfthuong.github.io/tech-notes/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://jfthuong.github.io/tech-notes/css/monokai.css">
+    <link rel="stylesheet" href="https://jfthuong.github.io/tech-notes/fancybox/jquery.fancybox.css">
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
     <meta property="og:title" content="SCons - Advanced" />
 <meta property="og:description" content="Advanced topics for SCons" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/2018/02/23/scons---advanced/" />
+<meta property="og:url" content="https://jfthuong.github.io/tech-notes/2018/02/23/scons---advanced/" />
 
 
 
@@ -73,16 +73,16 @@
 	<header id="header">
   <div id="header-main" class="header-inner">
     <div class="outer">
-      <a href="" id="logo">
+      <a href="https://jfthuong.github.io/tech-notes/" id="logo">
           
-          <i class="logo" style="background-image: url('css/images/logo.png')"></i>
+          <i class="logo" style="background-image: url('https://jfthuong.github.io/tech-notes/css/images/logo.png')"></i>
           
-          <span class="site-title">Training Materials</span>
+          <span class="site-title">Technical Notes</span>
       </a>
       <nav id="main-nav">
           
           
-          <a class="main-nav-link" href="/">Home</a>
+          <a class="main-nav-link" href="https://jfthuong.github.io/">Home</a>
           
           
           
@@ -98,21 +98,21 @@
           
           
           
-          <a class="main-nav-link" href="categories/python/">Python</a>
+          <a class="main-nav-link" href="https://jfthuong.github.io/tech-notes/categories/python/">Python</a>
           
           
           
-          <a class="main-nav-link" href="tags/">Tags</a>
+          <a class="main-nav-link" href="https://jfthuong.github.io/tech-notes/tags/">Tags</a>
           
           
           
-          <a class="main-nav-link" href="categories/">Categories</a>
+          <a class="main-nav-link" href="https://jfthuong.github.io/tech-notes/categories/">Categories</a>
           
           
       </nav>
         <nav id="sub-nav">
           <div class="profile" id="profile-nav">
-            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="css/images/avatar.png"><i class="fa fa-caret-down"></i></a>
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="https://jfthuong.github.io/tech-notes/css/images/avatar.png"><i class="fa fa-caret-down"></i></a>
           </div>
         </nav>
         <div id="search-form-wrap">
@@ -120,7 +120,7 @@
               <input type="search" name="q" class="search-form-input" placeholder="Search">
               <button type="submit" class="search-form-submit">
               </button>
-              <input type="hidden" name="sitesearch" value="" />
+              <input type="hidden" name="sitesearch" value="https://jfthuong.github.io/tech-notes/" />
          </form>
         </div>
     </div>
@@ -131,7 +131,7 @@
           <tr>
           
           
-          <td><a class="main-nav-link" href="/">Home</a></td>
+          <td><a class="main-nav-link" href="https://jfthuong.github.io/">Home</a></td>
           
           
           
@@ -147,21 +147,21 @@
           
           
           
-          <td><a class="main-nav-link" href="categories/python/">Python</a></td>
+          <td><a class="main-nav-link" href="https://jfthuong.github.io/tech-notes/categories/python/">Python</a></td>
           
           
           
-          <td><a class="main-nav-link" href="tags/">Tags</a></td>
+          <td><a class="main-nav-link" href="https://jfthuong.github.io/tech-notes/tags/">Tags</a></td>
           
           
           
-          <td><a class="main-nav-link" href="categories/">Categories</a></td>
+          <td><a class="main-nav-link" href="https://jfthuong.github.io/tech-notes/categories/">Categories</a></td>
           
           
           <td>
           <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
           <input type="search" name="q" class="search-form-input" placeholder="Search">
-          <input type="hidden" name="sitesearch" value="" />
+          <input type="hidden" name="sitesearch" value="https://jfthuong.github.io/tech-notes/" />
           </form>
         </td>
       </tr>
@@ -180,7 +180,7 @@
       <img id="avatar" src="https://www.gravatar.com/avatar/8063844ba80a593f6cf123309ce15c34?s=100&d=identicon"/>
       
       <h2 id="name">Jean-Francois Thuong</h2>
-      <h3 id="title">Learner - Programmer - Trainer</h3>
+      <h3 id="title">In love with learning and sharing</h3>
       <span id="location"><i class="fa fa-map-marker"></i>Shanghai, China</span>
       
           <a id="follow" href="https://github.com/jfthuong">
@@ -263,7 +263,7 @@
 
 
 
-          <td><a href="/index.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
+          <td><a href="https://jfthuong.github.io/tech-notes/index.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
         </tr>
       </table>
     </div>
@@ -279,7 +279,7 @@
         
 
         <header class="article-header">
-    <a href="/2018/02/23/scons---advanced/">
+    <a href="https://jfthuong.github.io/tech-notes/2018/02/23/scons---advanced/">
     <h1 class="article-title" itemprop="name">
         SCons - Advanced
     </h1>
@@ -305,7 +305,7 @@
                 <i class="fa fa-folder"></i>
                 
                 
-                <a class="article-category-link" href="categories/tool">Tool</a>
+                <a class="article-category-link" href="https://jfthuong.github.io/tech-notes/categories/tool">Tool</a>
                 
                 
             </div>
@@ -319,11 +319,11 @@
                 <i class="fa fa-tags"></i>
                 
                 
-                <a class="article-category-link" href="tags/scons">SCons</a>
+                <a class="article-category-link" href="https://jfthuong.github.io/tech-notes/tags/scons">SCons</a>
                 &middot;
                 
                 
-                <a class="article-category-link" href="tags/advanced">Advanced</a>
+                <a class="article-category-link" href="https://jfthuong.github.io/tech-notes/tags/advanced">Advanced</a>
                 
                 
             </div>
@@ -556,12 +556,12 @@ that contain <strong>.h</strong> files that you want to search for:</p>
 
         </div>
         <footer class="article-footer">
-    <a data-url="/2018/02/23/scons---advanced/" data-id="2c4c9ba46873cb4c00b397398784b14e" class="article-share-link">
+    <a data-url="https://jfthuong.github.io/tech-notes/2018/02/23/scons---advanced/" data-id="2c4c9ba46873cb4c00b397398784b14e" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
     
-    <a href="/2018/02/23/scons---advanced/#disqus_thread" class="article-comment-link">
+    <a href="https://jfthuong.github.io/tech-notes/2018/02/23/scons---advanced/#disqus_thread" class="article-comment-link">
         Comments
     </a>
     
@@ -637,16 +637,16 @@ that contain <strong>.h</strong> files that you want to search for:</p>
     
 <nav id="article-nav">
     
-    <a href="/2018/02/23/shell---useful-code/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="https://jfthuong.github.io/tech-notes/2018/02/23/scons---introduction/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">
           Older
       </strong>
-      <div class="article-nav-title">Shell - useful code</div>
+      <div class="article-nav-title">Scons - Introduction</div>
     </a>
     
 
     
-    <a href="/2018/02/23/pytest---advanced/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="https://jfthuong.github.io/tech-notes/2018/02/23/pytest---advanced/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">
           Newer
       </strong>
@@ -699,7 +699,7 @@ that contain <strong>.h</strong> files that you want to search for:</p>
             
             <li>
                 <div class="item-thumbnail">
-                    <a href="/2018/02/23/" class="thumbnail">
+                    <a href="https://jfthuong.github.io/tech-notes/2018/02/23/argparse---introduction/" class="thumbnail">
                     
                         <span class="thumbnail-image thumbnail-none"></span>
                     
@@ -710,117 +710,117 @@ that contain <strong>.h</strong> files that you want to search for:</p>
                     
                     <p class="item-category">
                         
-                        <a class="article-category-link" href="categories/tool">
+                        <a class="article-category-link" href="https://jfthuong.github.io/tech-notes/categories/python">
+                        Python
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://jfthuong.github.io/tech-notes/2018/02/23/argparse---introduction/" class="title">ArgParse - Introduction</a></p>
+                    <p class="item-date">
+                        <time datetime="2018-02-23 22:14:48 &#43;0800 CST" itemprop="datePublished">2018-02-23</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://jfthuong.github.io/tech-notes/2018/02/23/asciidoc---advanced-topics/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://jfthuong.github.io/tech-notes/categories/language">
+                        Language
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://jfthuong.github.io/tech-notes/2018/02/23/asciidoc---advanced-topics/" class="title">AsciiDoc - Advanced topics</a></p>
+                    <p class="item-date">
+                        <time datetime="2018-02-23 22:14:48 &#43;0800 CST" itemprop="datePublished">2018-02-23</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://jfthuong.github.io/tech-notes/2018/02/23/asciidoc---introduction/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://jfthuong.github.io/tech-notes/categories/language">
+                        Language
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://jfthuong.github.io/tech-notes/2018/02/23/asciidoc---introduction/" class="title">AsciiDoc - Introduction</a></p>
+                    <p class="item-date">
+                        <time datetime="2018-02-23 22:14:48 &#43;0800 CST" itemprop="datePublished">2018-02-23</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://jfthuong.github.io/tech-notes/2018/02/23/pytest---advanced/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://jfthuong.github.io/tech-notes/categories/python">
+                        Python
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://jfthuong.github.io/tech-notes/2018/02/23/pytest---advanced/" class="title">Pytest - Advanced</a></p>
+                    <p class="item-date">
+                        <time datetime="2018-02-23 22:14:48 &#43;0800 CST" itemprop="datePublished">2018-02-23</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://jfthuong.github.io/tech-notes/2018/02/23/scons---advanced/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://jfthuong.github.io/tech-notes/categories/tool">
                         Tool
                         </a>
                     </p>
                     
                     
-                    <p class="item-title"><a href="/2018/02/23/" class="title"></a></p>
-                    <p class="item-date">
-                        <time datetime="2018-02-23 22:14:48 &#43;0800 CST" itemprop="datePublished">2018-02-23</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="/2018/02/23/argparse---introduction/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="categories/python">
-                        Python
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="/2018/02/23/argparse---introduction/" class="title">ArgParse - Introduction</a></p>
-                    <p class="item-date">
-                        <time datetime="2018-02-23 22:14:48 &#43;0800 CST" itemprop="datePublished">2018-02-23</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="/2018/02/23/asciidoc---advanced-topics/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="categories/language">
-                        Language
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="/2018/02/23/asciidoc---advanced-topics/" class="title">AsciiDoc - Advanced topics</a></p>
-                    <p class="item-date">
-                        <time datetime="2018-02-23 22:14:48 &#43;0800 CST" itemprop="datePublished">2018-02-23</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="/2018/02/23/asciidoc---introduction/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="categories/language">
-                        Language
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="/2018/02/23/asciidoc---introduction/" class="title">AsciiDoc - Introduction</a></p>
-                    <p class="item-date">
-                        <time datetime="2018-02-23 22:14:48 &#43;0800 CST" itemprop="datePublished">2018-02-23</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="/2018/02/23/pytest---advanced/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="categories/python">
-                        Python
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="/2018/02/23/pytest---advanced/" class="title">Pytest - Advanced</a></p>
+                    <p class="item-title"><a href="https://jfthuong.github.io/tech-notes/2018/02/23/scons---advanced/" class="title">SCons - Advanced</a></p>
                     <p class="item-date">
                         <time datetime="2018-02-23 22:14:48 &#43;0800 CST" itemprop="datePublished">2018-02-23</time>
                     </p>
@@ -842,7 +842,7 @@ that contain <strong>.h</strong> files that you want to search for:</p>
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="categories/it">
+                <a class="category-list-link" href="https://jfthuong.github.io/tech-notes/categories/it">
                     it
                 </a>
                 <span class="category-list-count">1</span>
@@ -850,7 +850,7 @@ that contain <strong>.h</strong> files that you want to search for:</p>
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="categories/language">
+                <a class="category-list-link" href="https://jfthuong.github.io/tech-notes/categories/language">
                     language
                 </a>
                 <span class="category-list-count">2</span>
@@ -858,7 +858,7 @@ that contain <strong>.h</strong> files that you want to search for:</p>
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="categories/python">
+                <a class="category-list-link" href="https://jfthuong.github.io/tech-notes/categories/python">
                     python
                 </a>
                 <span class="category-list-count">2</span>
@@ -866,7 +866,7 @@ that contain <strong>.h</strong> files that you want to search for:</p>
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="categories/shell">
+                <a class="category-list-link" href="https://jfthuong.github.io/tech-notes/categories/shell">
                     shell
                 </a>
                 <span class="category-list-count">1</span>
@@ -874,7 +874,7 @@ that contain <strong>.h</strong> files that you want to search for:</p>
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="categories/tool">
+                <a class="category-list-link" href="https://jfthuong.github.io/tech-notes/categories/tool">
                     tool
                 </a>
                 <span class="category-list-count">2</span>
@@ -899,7 +899,7 @@ that contain <strong>.h</strong> files that you want to search for:</p>
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="tags/advanced">
+                <a class="category-list-link" href="https://jfthuong.github.io/tech-notes/tags/advanced">
                     advanced
                 </a>
                 <span class="category-list-count">3</span>
@@ -907,7 +907,7 @@ that contain <strong>.h</strong> files that you want to search for:</p>
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="tags/argparse">
+                <a class="category-list-link" href="https://jfthuong.github.io/tech-notes/tags/argparse">
                     argparse
                 </a>
                 <span class="category-list-count">2</span>
@@ -915,7 +915,7 @@ that contain <strong>.h</strong> files that you want to search for:</p>
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="tags/asciidoc">
+                <a class="category-list-link" href="https://jfthuong.github.io/tech-notes/tags/asciidoc">
                     asciidoc
                 </a>
                 <span class="category-list-count">1</span>
@@ -923,7 +923,7 @@ that contain <strong>.h</strong> files that you want to search for:</p>
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="tags/boot">
+                <a class="category-list-link" href="https://jfthuong.github.io/tech-notes/tags/boot">
                     boot
                 </a>
                 <span class="category-list-count">1</span>
@@ -931,7 +931,7 @@ that contain <strong>.h</strong> files that you want to search for:</p>
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="tags/intro">
+                <a class="category-list-link" href="https://jfthuong.github.io/tech-notes/tags/intro">
                     intro
                 </a>
                 <span class="category-list-count">3</span>
@@ -939,7 +939,7 @@ that contain <strong>.h</strong> files that you want to search for:</p>
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="tags/pytest">
+                <a class="category-list-link" href="https://jfthuong.github.io/tech-notes/tags/pytest">
                     pytest
                 </a>
                 <span class="category-list-count">1</span>
@@ -947,7 +947,7 @@ that contain <strong>.h</strong> files that you want to search for:</p>
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="tags/scons">
+                <a class="category-list-link" href="https://jfthuong.github.io/tech-notes/tags/scons">
                     scons
                 </a>
                 <span class="category-list-count">2</span>
@@ -955,7 +955,7 @@ that contain <strong>.h</strong> files that you want to search for:</p>
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="tags/snippet">
+                <a class="category-list-link" href="https://jfthuong.github.io/tech-notes/tags/snippet">
                     snippet
                 </a>
                 <span class="category-list-count">1</span>
@@ -963,7 +963,7 @@ that contain <strong>.h</strong> files that you want to search for:</p>
             
             <li class="category-list-item">
                 
-                <a class="category-list-link" href="tags/win10">
+                <a class="category-list-link" href="https://jfthuong.github.io/tech-notes/tags/win10">
                     win10
                 </a>
                 <span class="category-list-count">1</span>
@@ -986,31 +986,31 @@ that contain <strong>.h</strong> files that you want to search for:</p>
     <div class="widget tagcloud">
         
         
-        <a href="tags/advanced" style="font-size: 12px;">advanced</a>
+        <a href="https://jfthuong.github.io/tech-notes/tags/advanced" style="font-size: 12px;">advanced</a>
         
         
-        <a href="tags/argparse" style="font-size: 12px;">argparse</a>
+        <a href="https://jfthuong.github.io/tech-notes/tags/argparse" style="font-size: 12px;">argparse</a>
         
         
-        <a href="tags/asciidoc" style="font-size: 12px;">asciidoc</a>
+        <a href="https://jfthuong.github.io/tech-notes/tags/asciidoc" style="font-size: 12px;">asciidoc</a>
         
         
-        <a href="tags/boot" style="font-size: 12px;">boot</a>
+        <a href="https://jfthuong.github.io/tech-notes/tags/boot" style="font-size: 12px;">boot</a>
         
         
-        <a href="tags/intro" style="font-size: 12px;">intro</a>
+        <a href="https://jfthuong.github.io/tech-notes/tags/intro" style="font-size: 12px;">intro</a>
         
         
-        <a href="tags/pytest" style="font-size: 12px;">pytest</a>
+        <a href="https://jfthuong.github.io/tech-notes/tags/pytest" style="font-size: 12px;">pytest</a>
         
         
-        <a href="tags/scons" style="font-size: 12px;">scons</a>
+        <a href="https://jfthuong.github.io/tech-notes/tags/scons" style="font-size: 12px;">scons</a>
         
         
-        <a href="tags/snippet" style="font-size: 12px;">snippet</a>
+        <a href="https://jfthuong.github.io/tech-notes/tags/snippet" style="font-size: 12px;">snippet</a>
         
         
-        <a href="tags/win10" style="font-size: 12px;">win10</a>
+        <a href="https://jfthuong.github.io/tech-notes/tags/win10" style="font-size: 12px;">win10</a>
         
     </div>
 </div>
@@ -1036,8 +1036,8 @@ that contain <strong>.h</strong> files that you want to search for:</p>
 </footer>
 
 
-<script src="fancybox/jquery.fancybox.pack.js"></script>
-<script src="js/script.js"></script>
+<script src="https://jfthuong.github.io/tech-notes/fancybox/jquery.fancybox.pack.js"></script>
+<script src="https://jfthuong.github.io/tech-notes/js/script.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
 
 

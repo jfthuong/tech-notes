@@ -1,95 +1,95 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Training Materials</title>
-    <link>/tags/</link>
-    <description>Recent content in Tags on Training Materials</description>
+    <title>Tags on Technical Notes</title>
+    <link>https://jfthuong.github.io/tech-notes/tags/</link>
+    <description>Recent content in Tags on Technical Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Hugo](//gohugo.io).</copyright>
     <lastBuildDate>Fri, 23 Feb 2018 22:14:48 +0800</lastBuildDate>
     
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jfthuong.github.io/tech-notes/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Advanced</title>
-      <link>/tags/advanced/</link>
+      <link>https://jfthuong.github.io/tech-notes/tags/advanced/</link>
       <pubDate>Fri, 23 Feb 2018 22:14:48 +0800</pubDate>
       
-      <guid>/tags/advanced/</guid>
+      <guid>https://jfthuong.github.io/tech-notes/tags/advanced/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Argparse</title>
-      <link>/tags/argparse/</link>
+      <link>https://jfthuong.github.io/tech-notes/tags/argparse/</link>
       <pubDate>Fri, 23 Feb 2018 22:14:48 +0800</pubDate>
       
-      <guid>/tags/argparse/</guid>
+      <guid>https://jfthuong.github.io/tech-notes/tags/argparse/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Asciidoc</title>
-      <link>/tags/asciidoc/</link>
+      <link>https://jfthuong.github.io/tech-notes/tags/asciidoc/</link>
       <pubDate>Fri, 23 Feb 2018 22:14:48 +0800</pubDate>
       
-      <guid>/tags/asciidoc/</guid>
+      <guid>https://jfthuong.github.io/tech-notes/tags/asciidoc/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Boot</title>
-      <link>/tags/boot/</link>
+      <link>https://jfthuong.github.io/tech-notes/tags/boot/</link>
       <pubDate>Mon, 26 Feb 2018 09:14:48 +0800</pubDate>
       
-      <guid>/tags/boot/</guid>
+      <guid>https://jfthuong.github.io/tech-notes/tags/boot/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Intro</title>
-      <link>/tags/intro/</link>
+      <link>https://jfthuong.github.io/tech-notes/tags/intro/</link>
       <pubDate>Fri, 23 Feb 2018 22:14:48 +0800</pubDate>
       
-      <guid>/tags/intro/</guid>
+      <guid>https://jfthuong.github.io/tech-notes/tags/intro/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Pytest</title>
-      <link>/tags/pytest/</link>
+      <link>https://jfthuong.github.io/tech-notes/tags/pytest/</link>
       <pubDate>Fri, 23 Feb 2018 22:14:48 +0800</pubDate>
       
-      <guid>/tags/pytest/</guid>
+      <guid>https://jfthuong.github.io/tech-notes/tags/pytest/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Scons</title>
-      <link>/tags/scons/</link>
+      <link>https://jfthuong.github.io/tech-notes/tags/scons/</link>
       <pubDate>Fri, 23 Feb 2018 22:14:48 +0800</pubDate>
       
-      <guid>/tags/scons/</guid>
+      <guid>https://jfthuong.github.io/tech-notes/tags/scons/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Snippet</title>
-      <link>/tags/snippet/</link>
+      <link>https://jfthuong.github.io/tech-notes/tags/snippet/</link>
       <pubDate>Fri, 23 Feb 2018 22:14:48 +0800</pubDate>
       
-      <guid>/tags/snippet/</guid>
+      <guid>https://jfthuong.github.io/tech-notes/tags/snippet/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Win10</title>
-      <link>/tags/win10/</link>
+      <link>https://jfthuong.github.io/tech-notes/tags/win10/</link>
       <pubDate>Mon, 26 Feb 2018 09:14:48 +0800</pubDate>
       
-      <guid>/tags/win10/</guid>
+      <guid>https://jfthuong.github.io/tech-notes/tags/win10/</guid>
       <description></description>
     </item>
     

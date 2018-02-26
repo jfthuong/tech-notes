@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Shell on Training Materials</title>
-    <link>/categories/shell/</link>
-    <description>Recent content in Shell on Training Materials</description>
+    <title>Shell on Technical Notes</title>
+    <link>https://jfthuong.github.io/tech-notes/categories/shell/</link>
+    <description>Recent content in Shell on Technical Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Hugo](//gohugo.io).</copyright>
     <lastBuildDate>Fri, 23 Feb 2018 22:14:48 +0800</lastBuildDate>
     
-	<atom:link href="/categories/shell/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jfthuong.github.io/tech-notes/categories/shell/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Shell - useful code</title>
-      <link>/2018/02/23/shell---useful-code/</link>
+      <link>https://jfthuong.github.io/tech-notes/2018/02/23/shell---useful-code/</link>
       <pubDate>Fri, 23 Feb 2018 22:14:48 +0800</pubDate>
       
-      <guid>/2018/02/23/shell---useful-code/</guid>
+      <guid>https://jfthuong.github.io/tech-notes/2018/02/23/shell---useful-code/</guid>
       <description>Table of Contents Shell commands Operations on arguments     Shell commands Operations on arguments Checking if an argument has been defined:
  if [ &amp;quot;$1&amp;quot; == &amp;quot;&amp;quot; ]; then # No argument found else # At least one argument fi   Parsing from the 2nd argument:
  if [ &amp;quot;$1&amp;quot; == &amp;quot;clean&amp;quot; ]; then clean=1 args=&amp;quot;${@:2}&amp;quot; else clean=0 args=&amp;quot;$@&amp;quot; fi      </description>
